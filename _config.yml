@@ -12,11 +12,10 @@ baseurl: ""
 #baseurl: "/projectname"
 
 # Name of website
-title: Felix Ding <br\>
-       丁飞
+title: Felix Ding
 
 # Short description of your site
-description: A virtual proof that name is awesome!
+#description: description
 
 # --- Navigation bar options --- #
 
