@@ -22,9 +22,9 @@ description:
 # List of links in the navigation bar
 navbar-links:
   Home: "http://uraplutonium.github.io"
-  Blog: "http://uraplutonium.github.io"
-  Projects: "http://uraplutonium.github.io"
-  Publications: "http://uraplutonium.github.io"
+  #Blog: "http://uraplutonium.github.io"
+  #Projects: "http://uraplutonium.github.io"
+  #Publications: 
      - ADTree in Python: "http://uraplutonium.github.io/adtree-py"
   About Me: "aboutme"
 
