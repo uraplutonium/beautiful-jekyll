@@ -4,17 +4,15 @@ title: Post template
 subtitle: subtitle
 image: /img/hello_world.jpeg
 bigimg: /img/path.jpg
-tags: [random, exciting-stuff]
+tags: [tag1, tag2]
 ---
 
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+[Link name](http://uraplutonium.github.io/)
 
-**Here is some bold text**
+**bold text**
+# heading 1
+## heading 2
 
-## Here is a secondary heading
-
-Here's a useless table:
- 
 | Number | Next number | Previous number |
 | :------ |:--- | :--- |
 | Five | Six | Four |
@@ -22,12 +20,11 @@ Here's a useless table:
 | Seven | Eight | Six |
 | Two | Three | One |
  
-
-How about a yummy crepe?
-
+ image:
+ 
 ![Crepe](http://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
 
-Here's a code chunk:
+code:
 
 ~~~
 var foo = function(x) {
@@ -36,7 +33,7 @@ var foo = function(x) {
 foo(3)
 ~~~
 
-And here is the same code with syntax highlighting:
+code with syntax highlighting:
 
 ```javascript
 var foo = function(x) {
@@ -45,8 +42,7 @@ var foo = function(x) {
 foo(3)
 ```
 
-And here is the same code yet again but with line numbers:
-
+code with line numbers:
 {% highlight javascript linenos %}
 var foo = function(x) {
   return(x + 5);
