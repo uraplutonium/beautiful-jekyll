@@ -15,7 +15,7 @@ baseurl: ""
 title: Felix Ding
 
 # Short description of your site
-description: "2"
+description: "3"
 
 # --- Navigation bar options --- #
 
@@ -23,8 +23,8 @@ description: "2"
 navbar-links:
   Home: "http://uraplutonium.github.io"
   Posts: "posts"
-  Projects: "http://uraplutonium.github.io"
-     - ADTree in Python: "http://uraplutonium.github.io/adtree-py"
+  #Projects: "http://uraplutonium.github.io"
+  #   - ADTree in Python: "http://uraplutonium.github.io/adtree-py"
   Publications: "http://www.baidu.com"
   About Me: "aboutme"
 
