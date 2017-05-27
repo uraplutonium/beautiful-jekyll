@@ -1,14 +1,12 @@
 ---
 layout: page
 title: Felix Ding
-subtitle: Three passions, simple but overwhelmingly strong, have governed my life - the longing for *love*, the search for knowledge, and unbearable pity for the suffering of mankind.  Bertrand Russell
+subtitle: 丁飞
 ---
 
 I am a PhD fellow at Computer science and technology college at the Nanjing University of Aeronautics and Astronautics. My research is focused on distributed learning, PaaS cloud computing and Bayesian inference.
 
 Before my PhD, I obtained a Bachelor degree in Computer Science and Technology in 2011 at NUAA (China), and a MSc. degree in Computing in 2013 at University of York (UK).
-
-have governed my life the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind. Bertrand Russell
 
 Contacts:
 Department of Computer Science and Technology, Nanjing University of Aeronautics and Astronautics (JiangJunRoad Campus)
