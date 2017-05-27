@@ -15,14 +15,13 @@ baseurl: ""
 title: Felix Ding
 
 # Short description of your site
-description: "9"
+description: "10"
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
-  Home: "http://uraplutonium.github.io"
-  Posts: "posts"
+  Posts: "http://uraplutonium.github.io"
   Projects:
      - ADTree: "http://uraplutonium.github.io/adtree-py/"
   Publications: "publications"
