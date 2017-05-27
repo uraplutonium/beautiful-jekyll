@@ -1,16 +1,14 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: "Three passions, simple but overwhelmingly strong, have governed my life: the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind." --Bertrand Russell
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I am a PhD fellow at Computer science and technology college at the Nanjing University of Aeronautics and Astronautics. My research is focused on distributed learning, PaaS cloud computing and Bayesian inference.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Before my PhD, I obtained a Bachelor degree in Computer Science and Technology in 2011 at NUAA (China), and a MSc. degree in Computing in 2013 at University of York (UK).
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Contacts:
+Department of Computer Science and Technology, Nanjing University of Aeronautics and Astronautics (JiangJunRoad Campus)
+No. 29, Road JiangJun, District JiangNing
+Nanjing, JiangSu Province, China 210016
