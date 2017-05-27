@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Felix Ding
-subtitle: Three passions, simple but overwhelmingly strong, have governed my life the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind.  Bertrand Russell
+subtitle: "Three passions, simple but overwhelmingly strong, have governed my life the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind."  Bertrand Russell
 ---
 
 I am a PhD fellow at Computer science and technology college at the Nanjing University of Aeronautics and Astronautics. My research is focused on distributed learning, PaaS cloud computing and Bayesian inference.
