@@ -15,7 +15,7 @@ baseurl: ""
 title: Felix Ding
 
 # Short description of your site
-description: "6"
+description: "7"
 
 # --- Navigation bar options --- #
 
@@ -46,9 +46,7 @@ author:
   facebook: uraplutonium
   github: uraplutonium
   twitter: Felix__Ting
-  google-plus: +uraplutonium
-  linkedin: uraplutonium
-  telephone: 008615850686262
+  linkedin: 飞-丁-26273b32
 
 # Select which links to show in the footer
 footer-links-active:
@@ -56,13 +54,8 @@ footer-links-active:
   facebook: true
   email: true
   twitter: true
-  google-plus: true
   github: true
   linkedin: true
-  stackoverflow: false
-  youtube: false
-  spotify: false
-  telephone: false
 
 # Select which share links to show in posts
 share-links-active:
