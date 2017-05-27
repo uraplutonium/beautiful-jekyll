@@ -24,7 +24,7 @@ navbar-links:
   Home: "http://uraplutonium.github.io"
   Posts: "posts"
   Projects: "projects"
-  #   - ADTree: "http://uraplutonium.github.io/adtree-py"
+     - ADTree: "http://uraplutonium.github.io/adtree-py"
   Publications: "publications"
   About Me: "aboutme"
 
