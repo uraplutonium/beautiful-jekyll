@@ -7,11 +7,12 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-# This page is under construction... 该页面建设中...
+# This page is under construction...
+# 该页面建设中...
 
 [1. Linux installation 系统安装](#1)
 
-+ [1.1 制作系统启动盘](#lock-touchpad)
++ [1.1 制作系统启动盘](#dd)
 + [1.2 GRUB2引导区设置](#lock-touchpad)
 + [1.3 系统分区自动挂载（fstab）](#lock-touchpad)
 + [1.4 使用内存加载临时目录/tmp](#lock-touchpad)
@@ -54,6 +55,22 @@ tags: [linux]
 + [3.10 将视频转换为mp4格式](#lock-touchpad)
 
 <h2 id='1'> 1. Linux installation 系统安装 </h2>
+
+<h3 id='dd'> 1.1 制作系统启动盘 </h3>
+
+使用dd将已下载好的linux系统镜像[os-image].iso写入到优盘上。
+
+~~~
+sudo dd if=[os-image].iso of=/dev/sdx bs=1M
+~~~
+
+优盘的设备文件为/dev/sdx，其中编号x可使用fdisk查询：
+
+~~~
+sudo fdisk -l
+~~~
+
+---
 
 <h2 id='2'> 2. Linux settings 系统设置 </h2>
 
