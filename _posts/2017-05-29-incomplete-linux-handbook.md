@@ -7,17 +7,18 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-[1. Linux installation](#1)
+[1. Linux installation 系统安装](#1)
 
 [2. Linux setting & usage 设置与使用](#2)
 
 [2.1 锁定笔记本触控板](#lock-touchpad)
+[2.2 crontab计划任务](#crontab)
 
-<h2 id='1'> Linux installation 系统安装 </h2>
+<h2 id='1'> 1. Linux installation 系统安装 </h2>
 
-<h2 id='2'> Linux setting & usage 设置与使用 </h2>
+<h2 id='2'> 2. Linux setting & usage 设置与使用 </h2>
 
-<h4 id='lock-touchpad'> 锁定笔记本触控板 </h4>
+<h3 id='lock-touchpad'> 2.1 锁定笔记本触控板 </h3>
 在终端中输入：
 	
 ~~~
@@ -26,7 +27,7 @@ sudo modprobe -r psmouse
 
 即可锁定触控板。该命令仅在下次重启前有效。
 
-### crontab计划任务
+<h3 id='crontab'> crontab计划任务 </h3>
 crontab可以定时、周期性地执行命令或脚本。
 以“每周一凌晨3点执行备份文件的脚本upn-backup.sh”为例：
 + 首先，安装crontab软件：
