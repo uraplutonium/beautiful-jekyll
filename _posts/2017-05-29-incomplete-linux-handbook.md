@@ -7,12 +7,17 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-	[1. Linux installation 系统安装](#1)
+[1. Linux installation 系统安装](#1)
 
-	[2. Linux setting & usage 设置与使用](#2)
+[2. Linux settings 系统设置](#1)
 
-	[2.1 锁定笔记本触控板](#lock-touchpad)
-	[2.2 crontab计划任务](#crontab)
+[2.1 使用内存加载临时目录/tmp](#lock-touchpad)
+
+[3. Linux commands & tools 命令与工具](#2)
+
+[3.1 锁定笔记本触控板](#lock-touchpad)
+[3.1 rsync文件同步](#lock-touchpad)
+[3.2 crontab计划任务](#crontab)
 
 <h2 id='1'> 1. Linux installation 系统安装 </h2>
 
