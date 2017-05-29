@@ -9,9 +9,9 @@ tags: [linux]
 
 # heading 1
 ## 锁定笔记本触控板
-	在终端中输入：
+在终端中输入：
 	
-	~~~
-	sudo modprobe -r psmouse
-	~~~
+~~~
+sudo modprobe -r psmouse
+~~~
 	
