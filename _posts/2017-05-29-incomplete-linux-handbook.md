@@ -18,14 +18,15 @@ sudo modprobe -r psmouse
 即可锁定触控板。该命令仅在下次重启前有效。
 
 ## crontab计划任务
-crontab可以定时、周期性地执行命令或脚本。以“每周一凌晨3点执行备份文件的脚本upn-backup.sh”为例：
+crontab可以定时、周期性地执行命令或脚本。
+以“每周一凌晨3点执行备份文件的脚本upn-backup.sh”为例：
 + 首先，安装crontab软件：
 
 ~~~
 sudo apt-get install corntab
 ~~~
 
-+ 创建crontab文件（~/crontab-file）：
++ 然后，创建crontab文件（~/crontab-file）：
 
 ~~~
 # Edit this file to introduce tasks to be run by cron.
@@ -56,16 +57,14 @@ sudo apt-get install corntab
 
 如默认crontab文件的注释所说，每一行的前5个数字分别代表执行命令的分钟（0-59）、小时（0-23）、日期（1-31）、月份（1-12）和星期（1-7）。星号“*”代表不作限制。“0 3	* * 1”代表每个月、每个星期一的03点00分执行命令。
 
-+ 在终端中输入：
++ 最后，在终端中输入下列语句来加载crontab文件：
 
 ~~~
 crontab ~/crontab-file
 ~~~
 
-加载crontab文件。要查看是否设置成功，可以执行：
+要查看是否设置成功，可以执行下列命令来查看当前所有的计划任务：
 
 ~~~
 crontab -l
 ~~~
-
-来查看当前所有的计划任务。
