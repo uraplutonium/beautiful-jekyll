@@ -13,7 +13,7 @@ tags: [linux]
 [1. Linux installation 系统安装](#1)
 
 + [1.1 制作系统启动盘](#dd)
-+ [1.2 GRUB2引导区设置](#lock-touchpad)
++ [1.2 GRUB2引导区设置](#grub2)
 + [1.3 系统分区自动挂载（fstab）](#lock-touchpad)
 + [1.4 使用内存加载临时目录/tmp](#lock-touchpad)
 + [1.5 挂载加密分区](#lock-touchpad)
@@ -72,7 +72,7 @@ sudo fdisk -l
 
 ----------------------------------------------------------------
 
-<h3 id='grub2'> GRUB2引导区设置 </h3>
+<h3 id='grub2'> 1.2 GRUB2引导区设置 </h3>
 
 GRUB2包含3部分文件：
 - /etc/default/grub    grub的自定义文件
