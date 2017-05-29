@@ -8,9 +8,9 @@ tags: [emacs, org, LaTeX]
 ---
 
 # 1. Universal shortcuts
-## 1.1 General shortcuts
+## General shortcuts
 | Shortcuts        | Description         |
-|------------------+---------------------|
+| :--------------- | :------------------ |
 | C-x C-c          | 关闭Emacs           |
 | C-g              | 取消执行            |
 | C-SPC            | 设置mark            |
@@ -19,14 +19,14 @@ tags: [emacs, org, LaTeX]
 | C-u M-! date     | 插入当前时间        |
 | [M-x multi-term] | 在Emacs中打开多终端 |
 
-## 1.2 Files
+## Files
 | Shortcuts | Description |
 |-----------+-------------|
 | C-f       | 打开文件    |
 | C-x C-s   | 保存文件    |
 | C-x s     | 另存为文件  |
 
-## 1.3 Cursor moves
+## Cursor moves
 | Shortcuts      | Description    |
 |----------------+----------------|
 | C-p            | 光标上移一行   |
@@ -42,7 +42,7 @@ tags: [emacs, org, LaTeX]
 | C-v            | 向下翻页       |
 | M-v            | 向上翻页       |
 
-## 1.4 Edit
+## Edit
 | Shortcuts    | Description      |
 |--------------+------------------|
 | M-DEL        | 往回删除一字     |
@@ -57,7 +57,7 @@ tags: [emacs, org, LaTeX]
 | C-x h        | 全选             |
 | M-%          | 替换             |
 
-## 1.5 Windows
+## Windows
 | Shortcuts      | Description                        |
 |----------------+------------------------------------|
 | C-x 0          | 关掉当前的视窗                     |
@@ -70,7 +70,7 @@ tags: [emacs, org, LaTeX]
 | C-x b          | 切换至已打开的buffer               |
 | [C-`]          | 切换至下一个标签页                 |
 
-## 1.6 Bookmarks
+## Bookmarks
 | Shortcuts           | Description              |
 |---------------------+--------------------------|
 | C-x r l             | 查看书签列表并切换至书签 |
@@ -79,7 +79,7 @@ tags: [emacs, org, LaTeX]
 | M-x bookmark-delete | 删除书签                 |
 
 # 2. org-mode shortcuts
-## 2.1 General shortcuts
+## General shortcuts
 | Shortcuts    | Description                                              |
 |--------------+----------------------------------------------------------|
 | TAB          | 切换光标所在大纲的显示状态，即折叠，打开下一级，打开全部 |
@@ -91,7 +91,7 @@ tags: [emacs, org, LaTeX]
 | C-c C-e      | 导出                                                     |
 | S-LEFT/RIGHT | 切换标题状态，即DONE，TODO，无                           |
 
-## 2.2 Tables
+## Tables
 | Shortcuts    | Description                    |
 |--------------+--------------------------------|
 | C-c RET      | 在输入表头之后生成表格结构     |
@@ -108,7 +108,7 @@ tags: [emacs, org, LaTeX]
 | M-LEFT/RIGHT | 将当前列向左/右移动            |
 | M-UP/DOWN    | 将当前行向上/下移动            |
 
-## 2.3 Tags
+## Tags
 | Shortcuts | Description                                  |
 |-----------+----------------------------------------------|
 | C-c C-c   | 在#+TAGS处刷新元数据，在标题处创建或编辑标签 |
