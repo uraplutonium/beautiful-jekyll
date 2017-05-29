@@ -7,7 +7,7 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-## OS installation
+[1. OS installation](#1)
 
 <h2 id='1'> OS installation </h2>
 
