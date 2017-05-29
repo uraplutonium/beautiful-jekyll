@@ -86,7 +86,7 @@ GRUB2包含3部分文件：
 
 GRUB2 的/usr/sbin/grub2/grub2-mkconfig会根据/etc/default/grub文件和/etc/grub.d/中的脚本文件生成/boot/grub2/grub.cfg(或/boot/grub/grub.cfg)
 
-#### + 为linux添加grub启动项
+#### 为linux添加grub启动项
 
 在/etc/grub.d/中添加启动脚本11_linux：
 ~~~
@@ -116,7 +116,7 @@ chainloader (hd0,1)+1
 EOF
 ~~~
 
-+ 生成/boot/grub2/grub.cfg
+#### 生成/boot/grub2/grub.cfg
 
 为添加的启动脚本添加执行权限：
 ~~~
@@ -187,13 +187,13 @@ sudo modprobe -r psmouse
 <h3 id='crontab'> 3.1 crontab计划任务 </h3>
 crontab可以定时、周期性地执行命令或脚本。
 以“每周一凌晨3点执行备份文件的脚本upn-backup.sh”为例：
-+ 首先，安装crontab软件：
+#### 首先，安装crontab软件：
 
 ~~~
 sudo apt-get install corntab
 ~~~
 
-+ 然后，创建crontab文件（~/crontab-file）：
+#### 然后，创建crontab文件（~/crontab-file）：
 
 ~~~
 # Edit this file to introduce tasks to be run by cron.
@@ -224,7 +224,7 @@ sudo apt-get install corntab
 
 如默认crontab文件的注释所说，每一行的前5个数字分别代表执行命令的分钟（0-59）、小时（0-23）、日期（1-31）、月份（1-12）和星期（1-7）。星号“*”代表不作限制。“0 3	* * 1”代表每个月、每个星期一的03点00分执行命令。
 
-+ 最后，在终端中输入下列语句来加载crontab文件：
+#### 最后，在终端中输入下列语句来加载crontab文件：
 
 ~~~
 crontab ~/crontab-file
