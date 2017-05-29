@@ -7,7 +7,10 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-# heading 1
+## OS installation
+
+<h2 id='1'> OS installation </h2>
+
 ## 锁定笔记本触控板
 在终端中输入：
 	
