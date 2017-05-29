@@ -84,7 +84,7 @@ GRUB2包含3部分文件：
 
 GRUB2 的/usr/sbin/grub2/grub2-mkconfig会根据/etc/default/grub文件和/etc/grub.d/中的脚本文件生成/boot/grub2/grub.cfg(或/boot/grub/grub.cfg)
 
-+ 为linux添加grub启动项
+#### 为linux添加grub启动项
 
 在/etc/grub.d/中添加启动脚本11_linux：
 ~~~
@@ -100,7 +100,7 @@ EOF
 ~~~
 menuentry一行为显示在GRUB2启动界面上的名称，set一行用来标示启动的硬盘和分区，特别要注意与GRUB不同的是，在GRUB2中硬盘的分区是从1开始计数的，而非GRUB中的0。但硬盘编号依然是从0开始计数的。例如(hd0,5)标示第1块硬盘上的第5个分区。
 
-+ 为windows添加grub启动项
+#### 为windows添加grub启动项
 
 在/etc/grub.d/中添加启动脚本12_windows：
 ~~~
@@ -144,7 +144,7 @@ sudo reboot
 以管理员账户修改/etc/fstab文件，自动挂载分区到/media/uraplutonium/Workstation，
  (run "id uraplutonium" first)
 
-{% highlight javascript linenos %}
+{% highlight shell linenos %}
 # /etc/fstab: static file system information.
 #
 # Use 'blkid' to print the universally unique identifier for a
