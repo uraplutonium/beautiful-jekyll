@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An incomplete Linux handbook
-#subtitle: subtitle
+subtitle: 一个不完整的Linux生存手册
 image: /ico/icon-linux.png
 #bigimg: /img/path.jpg
 tags: [linux]
