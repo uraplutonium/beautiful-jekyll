@@ -7,8 +7,9 @@ title: Emacs shortcuts
 tags: [emacs, org, LaTeX]
 ---
 
-# 1. Universal shortcuts
+# 1. Universal emacs shortcuts
 ## General shortcuts
+
 | Shortcuts        | Description         |
 | :--------------- | :------------------ |
 | C-x C-c          | 关闭Emacs           |
@@ -18,6 +19,13 @@ tags: [emacs, org, LaTeX]
 | M-!              | 执行外部shell命令   |
 | C-u M-! date     | 插入当前时间        |
 | [M-x multi-term] | 在Emacs中打开多终端 |
+
+| Number | Next number | Previous number |
+| :------ |:--- | :--- |
+| Five | Six | Four |
+| Ten | Eleven | Nine |
+| Seven | Eight | Six |
+| Two | Three | One |
 
 ## Files
 | Shortcuts | Description |
