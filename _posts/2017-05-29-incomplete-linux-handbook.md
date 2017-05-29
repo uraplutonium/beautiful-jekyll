@@ -7,6 +7,8 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
+# This page is under construction... 该页面建设中...
+
 [1. Linux installation 系统安装](#1)
 
 + [1.1 制作系统启动盘](#lock-touchpad)
