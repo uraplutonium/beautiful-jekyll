@@ -143,8 +143,9 @@ sudo reboot
 ----------------------------------------------------------------
 
 <h3 id='grub2'> 1.3 系统分区自动挂载（fstab） </h3>
-以管理员账户修改/etc/fstab文件，自动挂载分区到/media/uraplutonium/Workstation，
- (run "id uraplutonium" first)
+以管理员账户修改/etc/fstab文件，自动挂载分区到/media/uraplutonium/Workstation，分区可以是ext4格式（line 13）、ntfs格式（line 15）或加密分区（line 17）。另外，若内存空间足够大，可以将临时文件夹/tmp挂载到内存中用以加速系统速度（line 19）。
+
+“uid=1000”和“gid=1000”指定用户和用户组id，可用“id username”确认用户id。
 
 {% highlight shell linenos %}
 # /etc/fstab: static file system information.
