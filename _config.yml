@@ -21,9 +21,9 @@ description: ""
 
 # List of links in the navigation bar
 navbar-links:
+  Posts: "http://uraplutonium.github.io"
   Projects:
      - ADTree: "http://uraplutonium.github.io/adtree-py/"
-  Posts: "http://uraplutonium.github.io"
   Publications: "publications"
   About Me: "aboutme"
 

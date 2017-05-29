@@ -116,7 +116,7 @@ tags: [emacs, org, LaTeX]
 
 # 3. AUCTex
 | Shortcuts        | Description              |
-|:-----------------|:-------------------------|
+| :--------------- | :----------------------- |
 | C-c C-s          | 插入section              |
 | C-c C-j or M-RET | 插入item                 |
 | C-c C-e          | 插入environment          |
