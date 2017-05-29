@@ -86,7 +86,7 @@ GRUB2包含3部分文件：
 
 GRUB2 的/usr/sbin/grub2/grub2-mkconfig会根据/etc/default/grub文件和/etc/grub.d/中的脚本文件生成/boot/grub2/grub.cfg(或/boot/grub/grub.cfg)
 
-#### * 为linux添加grub启动项
+#### + 为linux添加grub启动项
 
 在/etc/grub.d/中添加启动脚本11_linux：
 ~~~
