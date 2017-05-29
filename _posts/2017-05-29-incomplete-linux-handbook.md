@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An incomplete Linux handbook
-subtitle: 一个不完整的Linux生存手册
+subtitle: 一份不完整的Linux生存手册
 image: /ico/icon-linux.png
 #bigimg: /img/path.jpg
 tags: [linux]
@@ -11,9 +11,9 @@ tags: [linux]
 
 [2. Linux settings 系统设置](#1)
 
-[2.1 使用内存加载临时目录/tmp](#lock-touchpad)
++ [2.1 使用内存加载临时目录/tmp](#lock-touchpad)
 
-[3. Linux commands & tools 命令与工具](#2)
+[3. Linux commands & tools 命令与工具](#3)
 
 + [3.1 锁定笔记本触控板](#lock-touchpad)
 + [3.1 rsync文件同步](#lock-touchpad)
@@ -21,7 +21,9 @@ tags: [linux]
 
 <h2 id='1'> 1. Linux installation 系统安装 </h2>
 
-<h2 id='2'> 2. Linux setting & usage 设置与使用 </h2>
+<h2 id='2'> 2. Linux setting 系统设置 </h2>
+
+<h2 id='3'> 3. Linux commands & tools 命令与工具 </h2>
 
 <h3 id='lock-touchpad'> 2.1 锁定笔记本触控板 </h3>
 在终端中输入：
@@ -31,6 +33,8 @@ sudo modprobe -r psmouse
 ~~~
 
 即可锁定触控板。该命令仅在下次重启前有效。
+
+---
 
 <h3 id='crontab'> crontab计划任务 </h3>
 crontab可以定时、周期性地执行命令或脚本。
