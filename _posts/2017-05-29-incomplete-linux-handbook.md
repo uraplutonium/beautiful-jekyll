@@ -15,9 +15,9 @@ tags: [linux]
 
 [3. Linux commands & tools 命令与工具](#2)
 
-[3.1 锁定笔记本触控板](#lock-touchpad)
-[3.1 rsync文件同步](#lock-touchpad)
-[3.2 crontab计划任务](#crontab)
++ [3.1 锁定笔记本触控板](#lock-touchpad)
++ [3.1 rsync文件同步](#lock-touchpad)
++ [3.2 crontab计划任务](#crontab)
 
 <h2 id='1'> 1. Linux installation 系统安装 </h2>
 
