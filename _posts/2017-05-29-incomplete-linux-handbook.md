@@ -8,10 +8,21 @@ tags: [linux]
 ---
 
 # heading 1
-## 锁定笔记本触控板
++ 锁定笔记本触控板
 在终端中输入：
 	
 ~~~
 sudo modprobe -r psmouse
 ~~~
-	
+
++ crontab计划任务
+安装crontab软件：
+
+~~~
+sudo apt-get install corntab
+~~~
+
+~~~
+0 3	* * *	/media/uraplutonium/Workstation/Applications/upnbin/upn-backup
+\#* *	* * *	/media/uraplutonium/Workstation/Applications/upnbin/upn-test
+~~~
