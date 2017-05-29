@@ -2,7 +2,7 @@
 layout: post
 title: Emacs shortcuts
 #subtitle: subtitle
-#image: /img/hello_world.jpeg
+image: /ico/icon-emacs.png
 #bigimg: /img/path.jpg
 tags: [emacs, org, LaTeX]
 ---
