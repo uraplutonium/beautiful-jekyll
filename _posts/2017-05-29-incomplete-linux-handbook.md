@@ -8,55 +8,55 @@ tags: [linux]
 ---
 
 [1. Linux installation 系统安装](#1)
-+ [2.1 制作系统启动盘](#lock-touchpad)
-+ [2.1 GRUB2引导区设置](#lock-touchpad)
-+ [2.1 系统分区自动挂载（fstab）](#lock-touchpad)
-+ [2.1 挂载加密分区](#lock-touchpad)
-+ [2.1 CentOS软件源](#lock-touchpad)
+
++ [1.1 制作系统启动盘](#lock-touchpad)
++ [1.2 GRUB2引导区设置](#lock-touchpad)
++ [1.3 系统分区自动挂载（fstab）](#lock-touchpad)
++ [1.4 使用内存加载临时目录/tmp](#lock-touchpad)
++ [1.5 挂载加密分区](#lock-touchpad)
++ [1.6 减少swap写入](#lock-touchpad)
++ [1.7 打开和关闭交换分区](#lock-touchpad)
++ [1.8 开机自动启动后台进程](#lock-touchpad)
++ [1.9 CentOS软件源](#lock-touchpad)
 
 [2. Linux settings 系统设置](#1)
 
-+ [2.1 使用内存加载临时目录/tmp](#lock-touchpad)
-+ [2.1 减少swap写入](#lock-touchpad)
 + [2.1 显示所有开机自动启动项目](#lock-touchpad)
-+ [2.1 启用nautilus上一级目录的BackSpace快捷键](#lock-touchpad)
-+ [2.1 删除ubuntu unity桌面lenses](#lock-touchpad)
-+ [2.1 更改Gnome桌面默认文件夹地址](#lock-touchpad)
-+ [2.1 禁用CentOS7的IPv6和防火墙](#lock-touchpad)
-+ [2.1 设置默认打开方式](#lock-touchpad)
-+ [2.1 samba共享文件夹设置](#lock-touchpad)
-+ [2.1 gnome ibus输入法设置](#lock-touchpad)
-+ [2.1 手动创建Gnome桌面快捷方式](#lock-touchpad)
-+ [2.1 ibus候选框不跟踪光标](#lock-touchpad)
-+ [2.1 打开和关闭交换分区](#lock-touchpad)
-+ [2.1 修复gvfs-metadata大量消耗内存](#lock-touchpad)
++ [2.2 锁定笔记本触控板](#lock-touchpad)
++ [2.3 ubuntu中合上屏幕后无操作](#lock-touchpad)
++ [2.4 查看系统信息](#lock-touchpad)
++ [2.5 自定义命令](#lock-touchpad)
++ [2.6 使用系统为父进程执行命令](#lock-touchpad)
++ [2.7 禁用CentOS7的IPv6和防火墙](#lock-touchpad)
++ [2.8 向sudo group中添加用户](#lock-touchpad)
++ [2.9 设置文件默认打开方式](#lock-touchpad)
++ [2.10 启用nautilus上一级目录的BackSpace快捷键](#lock-touchpad)
++ [2.11 删除ubuntu unity桌面lenses](#lock-touchpad)
++ [2.12 更改Gnome桌面默认文件夹地址](#lock-touchpad)
++ [2.13 gnome ibus输入法设置](#lock-touchpad)
++ [2.14 手动创建Gnome桌面快捷方式](#lock-touchpad)
++ [2.15 修复ibus候选框不跟踪光标](#lock-touchpad)
++ [2.16 修复gvfs-metadata大量消耗内存](#lock-touchpad)
 
 [3. Linux commands & tools 命令与工具](#3)
 
-+ [3.1 自定义命令](#lock-touchpad)
-+ [3.1 锁定笔记本触控板](#lock-touchpad)
-+ [3.1 ubuntu中合上屏幕后无操作](#lock-touchpad)
-+ [3.1 查看系统信息](#lock-touchpad)
-+ [3.1 rsync文件同步](#lock-touchpad)
-+ [3.2 crontab计划任务](#crontab)
-+ [3.1 maven local repository](#lock-touchpad)
-+ [3.1 向Gnome桌面发送通知](#lock-touchpad)
-+ [3.1 通过代理服务器使用yum和dnf](#lock-touchpad)
-+ [3.1 向sudo group中添加用户](#lock-touchpad)
-+ [3.1 ssh免密码登录](#lock-touchpad)
-+ [3.1 ssh反向隧道](#lock-touchpad)
-+ [3.1 apache2和php5网站](#lock-touchpad)
-+ [3.1 使用系统为父进程执行命令](#lock-touchpad)
-+ [3.1 开机自动启动后台进程](#lock-touchpad)
-+ [3.1 将视频转换为mp4格式](#lock-touchpad)
++ [3.1 crontab计划任务](#crontab)
++ [3.2 rsync文件同步](#lock-touchpad)
++ [3.3 通过代理服务器使用yum和dnf](#lock-touchpad)
++ [3.4 maven local repository](#lock-touchpad)
++ [3.5 向Gnome桌面发送通知](#lock-touchpad)
++ [3.6 ssh免密码登录](#lock-touchpad)
++ [3.7 ssh反向隧道](#lock-touchpad)
++ [2.8 samba共享文件夹设置](#lock-touchpad)
++ [3.9 apache2和php5网站](#lock-touchpad)
++ [3.10 将视频转换为mp4格式](#lock-touchpad)
 
 <h2 id='1'> 1. Linux installation 系统安装 </h2>
 
-<h2 id='2'> 2. Linux setting 系统设置 </h2>
+<h2 id='2'> 2. Linux settings 系统设置 </h2>
 
-<h2 id='3'> 3. Linux commands & tools 命令与工具 </h2>
+<h3 id='lock-touchpad'> 2.2 锁定笔记本触控板 </h3>
 
-<h3 id='lock-touchpad'> 2.1 锁定笔记本触控板 </h3>
 在终端中输入：
 	
 ~~~
@@ -67,7 +67,11 @@ sudo modprobe -r psmouse
 
 ---
 
-<h3 id='crontab'> crontab计划任务 </h3>
+<h2 id='3'> 3. Linux commands & tools 命令与工具 </h2>
+
+
+<h3 id='crontab'> 3.1 crontab计划任务 </h3>
+
 crontab可以定时、周期性地执行命令或脚本。
 以“每周一凌晨3点执行备份文件的脚本upn-backup.sh”为例：
 + 首先，安装crontab软件：
