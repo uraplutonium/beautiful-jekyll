@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs shortcuts
+subtitle: Emacs常用快捷键
 image: /ico/icon-emacs.png
 tags: [emacs, org, LaTeX]
 ---
