@@ -6,8 +6,8 @@ image: /ico/icon-emacs.png
 tags: [emacs, org, LaTeX]
 ---
 
-# 1. Universal emacs shortcuts
-## General shortcuts
+## 1. Universal emacs shortcuts
+### General shortcuts
 
 | Shortcuts        | Description         |
 | :--------------- | :------------------ |
@@ -19,7 +19,7 @@ tags: [emacs, org, LaTeX]
 | C-u M-! date     | 插入当前时间        |
 | [M-x multi-term] | 在Emacs中打开多终端 |
 
-## Files
+### Files
 
 | Shortcuts | Description |
 | :-------- | :---------- |
@@ -27,7 +27,7 @@ tags: [emacs, org, LaTeX]
 | C-x C-s   | 保存文件    |
 | C-x s     | 另存为文件  |
 
-## Cursor moves
+### Cursor moves
 
 | Shortcuts      | Description    |
 | :------------- | :------------- |
@@ -44,7 +44,7 @@ tags: [emacs, org, LaTeX]
 | C-v            | 向下翻页       |
 | M-v            | 向上翻页       |
 
-## Edit
+### Edit
 
 | Shortcuts    | Description      |
 | :----------- | :--------------- |
@@ -60,7 +60,7 @@ tags: [emacs, org, LaTeX]
 | C-x h        | 全选             |
 | M-%          | 替换             |
 
-## Windows
+### Windows
 
 | Shortcuts      | Description                        |
 | :------------- | :--------------------------------- |
@@ -74,7 +74,7 @@ tags: [emacs, org, LaTeX]
 | C-x b          | 切换至已打开的buffer               |
 | [C-`]          | 切换至下一个标签页                 |
 
-## Bookmarks
+### Bookmarks
 
 | Shortcuts           | Description              |
 | :------------------ | :----------------------- |
@@ -83,8 +83,8 @@ tags: [emacs, org, LaTeX]
 | C-x r m             | 保存书签                 |
 | M-x bookmark-delete | 删除书签                 |
 
-# 2. org-mode shortcuts
-## General shortcuts
+## 2. org-mode shortcuts
+### General shortcuts
 
 | Shortcuts    | Description                                              |
 | :----------- | :------------------------------------------------------- |
@@ -97,7 +97,7 @@ tags: [emacs, org, LaTeX]
 | C-c C-e      | 导出                                                     |
 | S-LEFT/RIGHT | 切换标题状态，即DONE，TODO，无                           |
 
-## Tables
+### Tables
 
 | Shortcuts    | Description                    |
 | :----------- | :----------------------------- |
@@ -115,14 +115,14 @@ tags: [emacs, org, LaTeX]
 | M-LEFT/RIGHT | 将当前列向左/右移动            |
 | M-UP/DOWN    | 将当前行向上/下移动            |
 
-## Tags
+### Tags
 
 | Shortcuts | Description                                  |
 | :-------- | :------------------------------------------- |
 | C-c C-c   | 在#+TAGS处刷新元数据，在标题处创建或编辑标签 |
 | C-c / m   | 搜索标签并按树状结构显示                     |
 
-# 3. AUCTex
+## 3. AUCTex
 
 | Shortcuts        | Description              |
 | :--------------- | :----------------------- |
