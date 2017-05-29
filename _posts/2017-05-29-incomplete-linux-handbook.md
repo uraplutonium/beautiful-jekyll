@@ -7,11 +7,16 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-[1. OS installation](#1)
+[1. Linux installation](#1)
 
-<h2 id='1'> OS installation </h2>
+[2. Linux setting & usage 设置与使用](#2)
+[2.1 锁定笔记本触控板](#lock-touchpad)
 
-## 锁定笔记本触控板
+<h2 id='1'> Linux installation 系统安装 </h2>
+
+<h2 id='2'> Linux setting & usage 设置与使用 </h2>
+
+<h4 id='lock-touchpad'> 锁定笔记本触控板 </h4>
 在终端中输入：
 	
 ~~~
