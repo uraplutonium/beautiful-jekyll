@@ -7,20 +7,16 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-# This page is under construction...
-# 该页面建设中...
-
 [1. Linux installation 系统安装](#1)
 
 + [1.1 制作系统启动盘](#dd)
 + [1.2 GRUB2引导区设置](#grub2)
-+ [1.3 系统分区自动挂载（fstab）](#lock-touchpad)
-+ [1.4 使用内存加载临时目录/tmp](#lock-touchpad)
-+ [1.5 挂载加密分区](#lock-touchpad)
-+ [1.6 减少swap写入](#lock-touchpad)
-+ [1.7 打开和关闭交换分区](#lock-touchpad)
-+ [1.8 开机自动启动后台进程](#lock-touchpad)
-+ [1.9 CentOS软件源](#lock-touchpad)
++ [1.3 系统分区自动挂载（fstab）](#fstab)
++ [1.4 挂载加密分区](#lock-touchpad)
++ [1.5 减少swap写入](#lock-touchpad)
++ [1.6 打开和关闭交换分区](#lock-touchpad)
++ [1.7 开机自动启动后台进程](#lock-touchpad)
++ [1.8 CentOS软件源](#lock-touchpad)
 
 [2. Linux settings 系统设置](#1)
 
@@ -141,6 +137,34 @@ sudo grub-install /dev/sda
 ~~~
 sudo reboot
 ~~~
+
+----------------------------------------------------------------
+
+<h3 id='grub2'> 1.3 系统分区自动挂载（fstab） </h3>
+以管理员账户修改/etc/fstab文件，自动挂载分区到/media/uraplutonium/Workstation，
+ (run "id uraplutonium" first)
+
+{% highlight javascript linenos %}
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sdb5 during installation
+UUID=e4211512-aa99-466e-8184-83e856977c35 /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sdb6 during installation
+UUID=8e6b0a37-3367-4158-bcd8-a7480ca8f115 none            swap    sw              0       0
+# mount the ext4 partition to Workstation
+UUID=d48a5b68-881b-4f9e-8101-81499ea3e0c5 /media/uraplutonium/Workstation ext4 defaults,async,nosuid,nodev,nofail 0 2
+# mount the NTFS partition to Workstation
+UUID=64B08D642EA2D142	/media/uraplutonium/Workstation	ntfs-3g	defaults,locale=en_GB.UTF-8.zh_CN,uid=1000,gid=1000,dmask=022,fmask=022	0
+# mount the encrypted partition to Workstation
+/dev/disk/by-uuid/15dc4506-239e-416b-9969-b3e30e3835a9 /media/uraplutonium/Workstation auto nosuid,nodev,nofail,x-gvfs-show 0 0
+# mount /tmp to RAM
+tmpfs /tmp tmpfs defaults,exec,nosuid 0 0
+{% endhighlight %}
 
 ----------------------------------------------------------------
 
