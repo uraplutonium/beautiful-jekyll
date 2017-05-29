@@ -15,6 +15,8 @@ tags: [linux]
 sudo modprobe -r psmouse
 ~~~
 
+即可锁定触控板。该命令仅在下次重启前有效。
+
 ## crontab计划任务
 安装crontab软件：
 
