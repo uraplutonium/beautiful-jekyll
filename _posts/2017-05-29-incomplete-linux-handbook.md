@@ -198,7 +198,7 @@ sudo swapoff -a
 
 <h3 id='startup'> 1.7 开机后以系统为父进程自动执行命令 </h3>
 
-有些命令或工具需要以系统为父进程启动，以星际文件系统IPFS和去中心化云存储平台Sia为例，使用setsid命令启动：
+有些命令或工具需要以系统为父进程启动，以星际文件系统[IPFS](https://ipfs.io/)和去中心化云存储平台[Sia](https://sia.tech/)为例，使用setsid命令启动：
 ~~~
 setsid ipfs daemon
 setsid /home/uraplutonium/Sia-v0.6.0-beta-linux-amd64/siad -d /home/uraplutonium/Sia
