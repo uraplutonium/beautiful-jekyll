@@ -7,7 +7,7 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-[1. Linux installation 系统安装](#1)
+[1. Linux installation & settings 系统安装与设置](#1)
 
 + [1.1 制作系统启动盘](#dd)
 + [1.2 GRUB2引导区设置](#grub2)
@@ -18,24 +18,22 @@ tags: [linux]
 + [1.7 开机后以系统为父进程自动执行命令](#startup)
 + [1.8 修改CentOS软件源](#cent-source)
 
-[2. Linux settings 系统设置](#1)
+[2. Linux customisation & fixing 系统定制与修复](#1)
 
-+ [2.1 显示所有开机自动启动项目](#lock-touchpad)
++ [2.1 显示所有开机自动启动项目](#show-startup)
 + [2.2 锁定笔记本触控板](#lock-touchpad)
-+ [2.3 ubuntu中合上屏幕后无操作](#lock-touchpad)
-+ [2.4 查看系统信息](#lock-touchpad)
-+ [2.5 自定义命令](#lock-touchpad)
-+ [2.6 使用系统为父进程执行命令](#lock-touchpad)
-+ [2.7 禁用CentOS7的IPv6和防火墙](#lock-touchpad)
-+ [2.8 向sudo group中添加用户](#lock-touchpad)
-+ [2.9 设置文件默认打开方式](#lock-touchpad)
-+ [2.10 启用nautilus上一级目录的BackSpace快捷键](#lock-touchpad)
-+ [2.11 删除ubuntu unity桌面lenses](#lock-touchpad)
-+ [2.12 更改Gnome桌面默认文件夹地址](#lock-touchpad)
-+ [2.13 gnome ibus输入法设置](#lock-touchpad)
-+ [2.14 手动创建Gnome桌面快捷方式](#lock-touchpad)
-+ [2.15 修复ibus候选框不跟踪光标](#lock-touchpad)
-+ [2.16 修复gvfs-metadata大量消耗内存](#lock-touchpad)
++ [2.3 ubuntu中合上屏幕后无操作](#lid)
++ [2.4 查看系统信息](#catsystem)
++ [2.5 自定义命令](#command)
++ [2.6 禁用CentOS7的IPv6和防火墙](#cent-ipv6)
++ [2.7 向sudo group中添加用户](#sudoers)
++ [2.8 设置文件默认打开方式](#apps)
++ [2.9 启用nautilus上一级目录的BackSpace快捷键](#backspace)
++ [2.10 删除ubuntu unity桌面lenses](#lenses)
++ [2.11 更改Gnome桌面默认文件夹地址](#folders)
++ [2.12 gnome ibus输入法设置](#ibus)
++ [2.13 手动创建Gnome桌面快捷方式](#desktop)
++ [2.14 修复gvfs-metadata大量消耗内存](#gvfs)
 
 [3. Linux commands & tools 命令与工具](#3)
 
@@ -50,7 +48,7 @@ tags: [linux]
 + [3.9 apache2和php5网站](#lock-touchpad)
 + [3.10 将视频转换为mp4格式](#lock-touchpad)
 
-<h2 id='1'> 1. Linux installation 系统安装 </h2>
+<h2 id='1'> Linux installation & settings 系统安装与设置 </h2>
 
 <h3 id='dd'> 1.1 制作系统启动盘 </h3>
 
@@ -198,7 +196,7 @@ sudo swapoff -a
 
 <h3 id='startup'> 1.7 开机后以系统为父进程自动执行命令 </h3>
 
-有些命令或工具需要以系统为父进程启动，以星际文件系统[IPFS](https://ipfs.io/)和去中心化云存储平台[Sia](https://sia.tech/)为例，使用setsid命令启动：
+有些命令或工具需要以系统为父进程启动，以[星际文件系统IPFS](https://ipfs.io/)和[去中心化云存储平台Sia](https://sia.tech/)为例，使用setsid命令启动：
 ~~~
 setsid ipfs daemon
 setsid /home/uraplutonium/Sia-v0.6.0-beta-linux-amd64/siad -d /home/uraplutonium/Sia
@@ -227,7 +225,11 @@ sudo yum makecache
 
 ----------------------------------------------------------------
 
-<h2 id='2'> 2. Linux settings 系统设置 </h2>
+<h2 id='2'> 2. Linux customisation & fixing 系统定制与修复 </h2>
+
+<h3 id='show-startup'> 2.1 显示所有开机自动启动项目 </h3>
+
+----------------------------------------------------------------
 
 <h3 id='lock-touchpad'> 2.2 锁定笔记本触控板 </h3>
 在终端中输入：
@@ -235,6 +237,54 @@ sudo yum makecache
 sudo modprobe -r psmouse
 ~~~
 即可锁定触控板。该命令仅在下次重启前有效。
+
+----------------------------------------------------------------
+
+<h3 id='lid'> 2.3 ubuntu中合上屏幕后无操作 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='catsystem'> 2.4 查看系统信息 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='command'> 2.5 自定义命令 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='cent-ipv6'> 2.6 禁用CentOS7的IPv6和防火墙 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='sudoers'> 2.7 向sudo group中添加用户 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='apps'> 2.8 设置文件默认打开方式 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='backspace'> 2.9 启用nautilus上一级目录的BackSpace快捷键 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='lenses'> 2.10 删除ubuntu unity桌面lenses </h3>
+
+----------------------------------------------------------------
+
+<h3 id='folders'> 2.11 更改Gnome桌面默认文件夹地址 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='ibus'> 2.12 gnome ibus设置 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='desktop'> 2.13 手动创建Gnome桌面快捷方式 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='gvfs'> 2.14 修复gvfs-metadata大量消耗内存 </h3>
 
 ----------------------------------------------------------------
 
