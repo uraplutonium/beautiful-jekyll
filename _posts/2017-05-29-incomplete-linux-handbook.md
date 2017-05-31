@@ -15,8 +15,8 @@ tags: [linux]
 + [1.4 挂载加密分区](#luks)
 + [1.5 减少swap写入](#reduce-swap)
 + [1.6 打开和关闭交换分区](#swap-on-off)
-+ [1.7 开机自动启动后台进程](#auto-startup)
-+ [1.8 CentOS软件源](#cent-source)
++ [1.7 开机后以系统为父进程自动执行命令](#startup)
++ [1.8 修改CentOS软件源](#cent-source)
 
 [2. Linux settings 系统设置](#1)
 
@@ -178,21 +178,52 @@ sudo mount /dev/mapper/crypt /mnt
 
 <h3 id='reduce-swap'> 1.5 减少swap写入 </h3>
 
+在/etc/sysctl.conf末尾加入下列内容，可减少swap的使用，以加快系统运行：
 
+~~~
+vm.swappiness=10
+~~~
+ 
 ----------------------------------------------------------------
 
 <h3 id='swap-on-off'> 1.6 打开和关闭交换分区 </h3>
+打开和关闭所有交换分区的命令分别为swapon和swapoff：
 
+~~~
+sudo swapon -a
+sudo swapoff -a
+~~~
 
 ----------------------------------------------------------------
 
-<h3 id='auto-startup'> 1.7 开机自动启动后台进程 </h3>
+<h3 id='startup'> 1.7 开机后以系统为父进程自动执行命令 </h3>
 
+有些命令或工具需要以系统为父进程启动，以星际文件系统IPFS和去中心化云存储平台Sia为例，使用setsid命令启动：
+~~~
+setsid ipfs daemon
+setsid /home/uraplutonium/Sia-v0.6.0-beta-linux-amd64/siad -d /home/uraplutonium/Sia
+~~~
+
+若需要开机后自动以系统为父进程自动启动后台进程，需要在/etc/rc.local中的exit 0之前插入以下内容：
+~~~
+su - uraplutonium -c "export IPFS_PATH=/media/uraplutonium/Extension/IPFS; setsid ipfs daemon"
+su - uraplutonium -c "setsid /home/Sia-v0.6.0-beta-linux-amd64/siad -d /home/uraplutonium/Sia"
+~~~
+其中uraplutonium为管理员用户名。
 
 ----------------------------------------------------------------
 
-<h3 id='cent-source'> 1.8 CentOS软件源 </h3>
+<h3 id='cent-source'> 1.8 修改CentOS软件源 </h3>
+先重命名原CentOS-Base软件源：
+~~~
+sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+~~~
 
+然后，将网易163软件源CentOS6-Base-163.repo或sohu软件源CentOS-Base-sohu.repo文件放入/etc/yum.repos.d/，并执行：
+~~~
+sudo yum clean all
+sudo yum makecache
+~~~
 
 ----------------------------------------------------------------
 
