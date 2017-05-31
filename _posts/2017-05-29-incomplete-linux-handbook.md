@@ -7,6 +7,8 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
+这份不完整的Linux生存手册记录了一些Linux系统的桌面用户在安装使用过程中可能遇到的问题，及其解决的方法。由于内容繁多，文章较长，推荐使用目录中的链接直接查看需要的内容。该手册将始终是“incomplete”的状态，因为它将会随着时间推移不断扩充和完善。
+
 [1. Linux installation & settings 系统安装与设置](#1)
 
 + [1.1 制作系统启动盘](#dd)
