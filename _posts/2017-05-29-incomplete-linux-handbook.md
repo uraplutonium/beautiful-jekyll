@@ -391,6 +391,7 @@ Command: start-pulseaudio-kde
 Status: unwanted for every GNOME users.
 
 + Remote Desktop
+
 The Vino server is a VNC server for incoming connections to the desktop, allowing others users to connect, view and operate in the desktop. This requires the Vino server was enabled in system preferences.
 
 Command: /usr/lib/vino/vino-server
@@ -398,6 +399,7 @@ Command: /usr/lib/vino/vino-server
 Status: unwanted until you’re absolutely sure what are doing.
 
 + Screensaver
+
 The screen saver relies on this component to start automatically after the desired time indicated in the system preferences. This also will lock the screen when the computer is left alone for some minutes.
 
 Command: gnome-screensaver
