@@ -7,18 +7,16 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-[toc]
-
 [1. Linux installation 系统安装](#1)
 
 + [1.1 制作系统启动盘](#dd)
 + [1.2 GRUB2引导区设置](#grub2)
 + [1.3 系统分区自动挂载（fstab）](#fstab)
-+ [1.4 挂载加密分区](#lock-touchpad)
-+ [1.5 减少swap写入](#lock-touchpad)
-+ [1.6 打开和关闭交换分区](#lock-touchpad)
-+ [1.7 开机自动启动后台进程](#lock-touchpad)
-+ [1.8 CentOS软件源](#lock-touchpad)
++ [1.4 挂载加密分区](#luks)
++ [1.5 减少swap写入](#reduce-swap)
++ [1.6 打开和关闭交换分区](#swap-on-off)
++ [1.7 开机自动启动后台进程](#auto-startup)
++ [1.8 CentOS软件源](#cent-source)
 
 [2. Linux settings 系统设置](#1)
 
@@ -168,6 +166,33 @@ UUID=64B08D642EA2D142	/media/uraplutonium/Workstation	ntfs-3g	defaults,locale=en
 # mount /tmp to RAM
 tmpfs /tmp tmpfs defaults,exec,nosuid 0 0
 {% endhighlight %}
+
+<h3 id='luks'> 1.4 挂载加密分区 </h3>
+要挂载加密的“crypt-luks”格式的加密ext4分区/dev/sdc1，执行以下指令以挂载至/mnt路径下：
+~~~
+sudo cryptsetup -v luksOpen /dev/sdc1 crypt
+sudo mount /dev/mapper/crypt /mnt
+~~~
+
+----------------------------------------------------------------
+
+<h3 id='reduce-swap'> 1.5 减少swap写入 </h3>
+
+
+----------------------------------------------------------------
+
+<h3 id='swap-on-off'> 1.6 打开和关闭交换分区 </h3>
+
+
+----------------------------------------------------------------
+
+<h3 id='auto-startup'> 1.7 开机自动启动后台进程 </h3>
+
+
+----------------------------------------------------------------
+
+<h3 id='cent-source'> 1.8 CentOS软件源 </h3>
+
 
 ----------------------------------------------------------------
 
