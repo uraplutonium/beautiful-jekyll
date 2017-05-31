@@ -63,6 +63,8 @@ footer-links-active:
 
 # Select which share links to show in posts
 share-links-active:
+  qq: true
+  wechat: true
   facebook: true
   twitter: true
   linkedin: true
