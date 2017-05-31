@@ -228,6 +228,156 @@ sudo yum makecache
 <h2 id='2'> 2. Linux customisation & fixing 系统定制与修复 </h2>
 
 <h3 id='show-startup'> 2.1 显示所有开机自动启动项目 </h3>
+执行下列命令以在“Startup Applications Preferences”中显示隐藏的自动启动项目：
+~~~
+sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
+~~~
+
+可能的默认启动项目包括：
+
++ AT SPI D-Bus Bus
+
+AT SPI stands for Assistive Technology Service Provider Interface, a framework to integrate accessibility functions in applications. This command will create a new DBus for AT SPI specific functions.
+Command: /usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately
+Status: unwanted until you need the accessibility features.
+Reference: https://www.linuxfoundation.org/
+
++ AT SPI Registry
+
+The AT SPI Registry is used by applications to interact with assistive technologies and peripherals.
+Command: /usr/lib/at-spi/at-spi-registryd
+Status: unwanted until you need the accessibility features.
+Reference: http://www.linuxfromscratch.org/blfs/view/svn/gnome/at-spi.html
+
++ Bluetooth Manager
+
+A GNOME classic applet for the GNOME panel to provide access to bluetooth devices configuration.
+Command: bluetooth-applet
+Status: unwanted until you use GNOME fallback session and you make use of the Bluetooth technology. Unneeded for GNOME Shell users.
+
++ Certificate and Key Storage
+
+A GNOME Keyring agent which will provide access to your encryption certificates for applications.
+Command: /usr/bin/gnome-keyring-daemon --start --components=pkcs11
+Status: unwanted if you don’t use encryption certificates.
+
++ Disk Notifications
+
+The Disk Utility notification is used to report disk failures using the SMART predictive technology.
+Command: /usr/lib/gnome-disk-utility/gdu-notification-daemon
+Status: recommended if your disks support the SMART, to discover incoming damages.
+
++ Evolution Alarm Notify
+
+Alarm notifier for Evolution incoming events and appointments.
+Command: /usr/lib/evolution/3.0/evolution-alarm-notify
+Status: unwanted if you don’t use the Evolution calendar alarms.
+
++ Fcitx
+
+Start Input Method
+Command: fcitx-autostart
+
++ Files
+
+The nautilus file manager for desktop icons.
+Command: nautilus -n
+Status: unwanted until you choose to enable the desktop with its icons.
+
++ GNOME Login Sound
+
+Play a sound from the sound theme after the login to welcome the user. This is broken since years, I’ve checked in Fedora, Ubuntu, Debian and Arch Linux, don’t know why but every default sound theme seems to miss the required file.
+Command: /usr/bin/canberra-gtk-play --id=”desktop-login”
+Status: unwanted until you fix the default theme and wish to hear a welcome sound.
+
++ GNOME Settings Daemon
+
+A daemon which grants access to all the GNOME system preferences.
+Command: /usr/bin/gnome-settings-daemon
+Status: recommended for everyone.
+
++ GPG Password Agent
+
+A GNOME Keyring agent which will loads your GPG keys and allow you to insert the passphrases in a graphical window when a GPG key is required during signing.
+Command: gnome-keyring-daemon --start --components=gpg
+Status: unwanted if you don’t use GPG keys to sign or encrypt data.
+
++ GSettings Data Conversion
+
+A conversion tool from GConf to GSettings, used to convert legacy settings into the new settings format used by GNOME 3.
+Command: gsettings-data-convert
+Status: wanted to migrate old schema configuration, its execution is really fast and light so that there’s no reason to disable it.
+
++ Mount Helper
+
+Automount and autorun plugged devices
+Command: /usr/lib/gnome-settings-daemon/gnome-fallback-mount-helper
+
++ Orca Screen Reader
+
+The Screen reader for people with reading and sight difficulties.
+Command: orca --no-setup --disable main-window --disable splash-window --disable magnifier --enable speech --enable braille
+Status: unwanted until you need accessibility features for speech or braille.
+
++ PolicyKit Authentication Agent
+
+An authentication agent which will require you user or administration password when applications need to check the user privileges. This doesn’t apply to sudo/su/gksu requests.
+Command: /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+Status: recommended for everyone.
+
++ Power Manager
+
+A GNOME daemon that communicates with the hardware for proper power management, stand by, suspend and reduce power consumption by underclocking the CPU.
+Command: gnome-power-manager
+Status: recommended for everyone.
+Reference: http://projects.gnome.org/gnome-power-manager/
+
++ Print Queue Applet
+
+A print job manager for CUPS to allow the user to be notified of printing and about new plugged printers to install.
+Command: system-config-printer-applet
+Status: wanted if you use any printers.
+
++ PulseAudio Sound System
+
+The PulseAudio system offers a sound server for multiple sound sources and communicates with the underlying audio architecture (the most common in GNU/Linux are ALSA and OSS) to mix multiple audio with multiple audio cards and manage volume for each application.
+Command: start-pulseaudio-x11
+Status: recommended for everyone until you have not a sound card working.
+
++ PulseAudio Sound System KDE Routing
+
+The PulseAudio starter for KDE. GNOME users don’t require this at all.
+Command: start-pulseaudio-kde
+Status: unwanted for every GNOME users.
+
++ Remote Desktop
+The Vino server is a VNC server for incoming connections to the desktop, allowing others users to connect, view and operate in the desktop. This requires the Vino server was enabled in system preferences.
+Command: /usr/lib/vino/vino-server
+Status: unwanted until you’re absolutely sure what are doing.
+
++ Screensaver
+The screen saver relies on this component to start automatically after the desired time indicated in the system preferences. This also will lock the screen when the computer is left alone for some minutes.
+Command: gnome-screensaver
+Status: recommended for everyone until you use another screen saver application.
+
++ Secret Storage Service
+
+The GNOME Keyring components that contains the personal saved passwords for various applications (Evolution, WiFi) will be unlocked to grant the applications the right to read their saved passwords.
+Command: /usr/bin/gnome-keyring-daemon --start --components=secrets
+Status: generally wanted  if you save passwords into applications.
+
++ SSH Key Agent
+
+A GNOME Keyring agent for SSH which will load your SSH keys from ~/.ssh in order to grant applications access to your SSH keys.
+Command: /usr/bin/gnome-keyring-daemon --start --components=ssh
+Status: unwanted if you don’t use SSH keys.
+Reference: https://live.gnome.org/GnomeKeyring/Ssh
+
++ Volume Control
+
+A GNOME classic applet for GNOME panel to let the user to arrange the volume of the audio.
+Command: gnome-sound-applet
+Status: unwanted until you use GNOME fallback session. Unneeded for GNOME Shell users.
 
 ----------------------------------------------------------------
 
