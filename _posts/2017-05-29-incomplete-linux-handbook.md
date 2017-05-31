@@ -48,7 +48,7 @@ tags: [linux]
 + [3.9 apache2和php5网站](#lock-touchpad)
 + [3.10 将视频转换为mp4格式](#lock-touchpad)
 
-<h2 id='1'> Linux installation & settings 系统安装与设置 </h2>
+<h2 id='1'> 1. Linux installation & settings 系统安装与设置 </h2>
 
 <h3 id='dd'> 1.1 制作系统启动盘 </h3>
 
