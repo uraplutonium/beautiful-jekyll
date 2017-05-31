@@ -47,26 +47,26 @@ avatar: "/ico/icon-avatar.png"
 author:
   name: Felix Ding
   email: "uraplutonium@yandex.com"
-  facebook: uraplutonium
   github: uraplutonium
+  facebook: uraplutonium
   twitter: Felix__Ting
   linkedin: 飞-丁-26273b32
 
 # Select which links to show in the footer
 footer-links-active:
-  rss: true
-  facebook: true
   email: true
-  twitter: false
   github: true
+  facebook: true
+  twitter: false
   linkedin: true
+  rss: true
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: false
   facebook: true
-  google: false
+  twitter: true
   linkedin: true
+  google: false
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
