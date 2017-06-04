@@ -7,4 +7,4 @@ image: /ico/icon-ipfs.png
 tags: [decentration]
 ---
 
-[IPFS Alpha Demo](https://gateway.ipfs.io/ipfs/QmeK22pqtVT4yNawXcHbZh2fDrncdYHQbepjrxFmD8tGYZ)
++ [IPFS Alpha Demo](https://gateway.ipfs.io/ipfs/QmeK22pqtVT4yNawXcHbZh2fDrncdYHQbepjrxFmD8tGYZ)
