@@ -523,7 +523,7 @@ uraplutonium	ALL=(ALL) 	ALL
 
 <h3 id='apps'> 2.7 设置文件默认打开方式 </h3>
 
-#### 个人配置
+#### Local configuration 局部配置
 Modify the file *~/.local/share/applications/mimeapps.list* or *~/.local/share/applications/mimeinfo.cache*. For example, we open all text and source code files by emacs24:  
 修改文件*~/.local/share/applications/mimeapps.list* 或 *~/.local/share/applications/mimeinfo.cache*。以使用emacs24打开所有的文本和源代码文件为例：  
 ~~~
@@ -550,8 +550,8 @@ application/x-shellscript=emacs24.desktop
 application/x-perl=emacs24.desktop
 ~~~
 
-#### 全局配置
-Modify the following files:
+#### Global configuration 全局配置
+Modify the following files:  
 修改下列文件：  
 */etc/gnome/defaults.list*  
 */usr/share/applications/mimeinfo.cache*
@@ -559,7 +559,8 @@ Modify the following files:
 ----------------------------------------------------------------
 
 <h3 id='backspace'> 2.8 启用nautilus上一级目录的BackSpace快捷键 </h3>
-Modify the file *~/.config/nautilus/accels*:
+Modify the file *~/.config/nautilus/accels*:  
+修改文件*~/.config/nautilus/accels*：  
 ~~~
 (gtk_accel_path "<Actions>/ShellActions/Up" "BackSpace")
 ~~~
