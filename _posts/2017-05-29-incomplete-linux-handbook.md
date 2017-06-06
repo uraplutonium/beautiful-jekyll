@@ -467,7 +467,8 @@ Add the following contents to _~/.profile_:
 ~~~
 export PATH="/media/uraplutonium/Workstation/Applications/upnbin:$PATH"
 ~~~
-and put your own shell commands in that folder. For example:
+and put your own shell commands in that folder and make the file executable.
+For example, the contents of _/media/uraplutonium/Workstation/Applications/upnbin/upn-test_ is as follow:
 ~~~
 #!/bin/bash
 # This script does nothing, but simply prints "Hello uraplutonium!" on the screen, and creates an empty file upntestfile in home folder.
