@@ -444,6 +444,19 @@ sudo modprobe -r psmouse
 
 <h3 id='lid'> 2.3 ubuntu中合上屏幕后无操作 </h3>
 
+Modify the following line in file _/etc/systemd/logind.conf_:
+~~~
+#HandleLidSwitch=suspend
+~~~
+to:
+~~~
+HandleLidSwitch=ignore
+~~~
+and restart the service by:
+~~~
+sudo systemctl restart systemd-logind.service
+~~~
+
 ----------------------------------------------------------------
 
 <h3 id='catsystem'> 2.4 查看系统信息 </h3>
