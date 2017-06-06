@@ -20,35 +20,35 @@ tags: [linux]
 + [1.7 开机后以系统为父进程自动执行命令](#startup)
 + [1.8 修改CentOS软件源](#cent-source)
 
-[2. Linux customisation & fixing 系统定制与修复](#1)
+[2. Linux customisation & fixing 系统定制与修复](#2)
 
 + [2.1 显示所有开机自动启动项目](#show-startup)
 + [2.2 锁定笔记本触控板](#lock-touchpad)
 + [2.3 ubuntu中合上屏幕后无操作](#lid)
-+ [2.4 查看系统信息](#catsystem)
-+ [2.5 自定义命令](#command)
-+ [2.6 禁用CentOS7的IPv6和防火墙](#cent-ipv6)
-+ [2.7 向sudo group中添加用户](#sudoers)
-+ [2.8 设置文件默认打开方式](#apps)
-+ [2.9 启用nautilus上一级目录的BackSpace快捷键](#backspace)
-+ [2.10 删除ubuntu unity桌面lenses](#lenses)
-+ [2.11 更改Gnome桌面默认文件夹地址](#folders)
-+ [2.12 gnome ibus输入法设置](#ibus)
-+ [2.13 手动创建Gnome桌面快捷方式](#desktop)
-+ [2.14 修复gvfs-metadata大量消耗内存](#gvfs)
++ [2.4 自定义命令](#command)
++ [2.5 禁用CentOS7的IPv6和防火墙](#cent-ipv6)
++ [2.6 向sudo group中添加用户](#sudoers)
++ [2.7 设置文件默认打开方式](#apps)
++ [2.8 启用nautilus上一级目录的BackSpace快捷键](#backspace)
++ [2.9删除ubuntu unity桌面lenses](#lenses)
++ [2.10 更改Gnome桌面默认文件夹地址](#folders)
++ [2.11 gnome ibus输入法设置](#ibus)
++ [2.12 手动创建Gnome桌面快捷方式](#desktop)
++ [2.13 修复gvfs-metadata大量消耗内存](#gvfs)
 
 [3. Linux commands & tools 命令与工具](#3)
 
-+ [3.1 crontab计划任务](#crontab)
-+ [3.2 rsync文件同步](#lock-touchpad)
-+ [3.3 通过代理服务器使用yum和dnf](#lock-touchpad)
-+ [3.4 maven local repository](#lock-touchpad)
-+ [3.5 向Gnome桌面发送通知](#lock-touchpad)
-+ [3.6 ssh免密码登录](#lock-touchpad)
-+ [3.7 ssh反向隧道](#lock-touchpad)
-+ [2.8 samba共享文件夹设置](#lock-touchpad)
-+ [3.9 apache2和php5网站](#lock-touchpad)
-+ [3.10 将视频转换为mp4格式](#lock-touchpad)
++ [3.1 查看系统信息](#catsystem)
++ [3.2 crontab计划任务](#crontab)
++ [3.3 rsync文件同步](#lock-touchpad)
++ [3.4 通过代理服务器使用yum和dnf](#lock-touchpad)
++ [3.5 maven local repository](#lock-touchpad)
++ [3.6 向Gnome桌面发送通知](#lock-touchpad)
++ [3.7 ssh免密码登录](#lock-touchpad)
++ [3.8 ssh反向隧道](#lock-touchpad)
++ [3.9 samba共享文件夹设置](#lock-touchpad)
++ [3.10 apache2和php5网站](#lock-touchpad)
++ [3.11 将视频转换为mp4格式](#lock-touchpad)
 
 <h2 id='1'> 1. Linux installation & settings 系统安装与设置 </h2>
 
@@ -459,7 +459,49 @@ sudo systemctl restart systemd-logind.service
 
 ----------------------------------------------------------------
 
-<h3 id='catsystem'> 2.4 查看系统信息 </h3>
+<h3 id='command'> 2.4 自定义命令 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='cent-ipv6'> 2.5 禁用CentOS7的IPv6和防火墙 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='sudoers'> 2.6 向sudo group中添加用户 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='apps'> 2.7 设置文件默认打开方式 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='backspace'> 2.8 启用nautilus上一级目录的BackSpace快捷键 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='lenses'> 2.9 删除ubuntu unity桌面lenses </h3>
+
+----------------------------------------------------------------
+
+<h3 id='folders'> 2.10 更改Gnome桌面默认文件夹地址 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='ibus'> 2.11 gnome ibus设置 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='desktop'> 2.12 手动创建Gnome桌面快捷方式 </h3>
+
+----------------------------------------------------------------
+
+<h3 id='gvfs'> 2.13 修复gvfs-metadata大量消耗内存 </h3>
+
+----------------------------------------------------------------
+
+<h2 id='3'> 3. Linux commands & tools 命令与工具 </h2>
+
+<h3 id='catsystem'> 3.1 查看系统信息 </h3>
 
 + Hardware 硬件
 
@@ -549,50 +591,7 @@ $ du -sh dirname #查看目录的使用空间
 
 ----------------------------------------------------------------
 
-<h3 id='command'> 2.5 自定义命令 </h3>
-
-----------------------------------------------------------------
-
-<h3 id='cent-ipv6'> 2.6 禁用CentOS7的IPv6和防火墙 </h3>
-
-----------------------------------------------------------------
-
-<h3 id='sudoers'> 2.7 向sudo group中添加用户 </h3>
-
-----------------------------------------------------------------
-
-<h3 id='apps'> 2.8 设置文件默认打开方式 </h3>
-
-----------------------------------------------------------------
-
-<h3 id='backspace'> 2.9 启用nautilus上一级目录的BackSpace快捷键 </h3>
-
-----------------------------------------------------------------
-
-<h3 id='lenses'> 2.10 删除ubuntu unity桌面lenses </h3>
-
-----------------------------------------------------------------
-
-<h3 id='folders'> 2.11 更改Gnome桌面默认文件夹地址 </h3>
-
-----------------------------------------------------------------
-
-<h3 id='ibus'> 2.12 gnome ibus设置 </h3>
-
-----------------------------------------------------------------
-
-<h3 id='desktop'> 2.13 手动创建Gnome桌面快捷方式 </h3>
-
-----------------------------------------------------------------
-
-<h3 id='gvfs'> 2.14 修复gvfs-metadata大量消耗内存 </h3>
-
-----------------------------------------------------------------
-
-<h2 id='3'> 3. Linux commands & tools 命令与工具 </h2>
-
-
-<h3 id='crontab'> 3.1 crontab计划任务 </h3>
+<h3 id='crontab'> 3.2 crontab计划任务 </h3>
 crontab可以定时、周期性地执行命令或脚本。
 以“每周一凌晨3点执行备份文件的脚本upn-backup.sh”为例：
 #### 首先，安装crontab软件：
