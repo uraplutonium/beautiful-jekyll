@@ -7,6 +7,9 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
+[TODO]: <> (中英双语)
+[TODO]: <> (引用)
+
 这份Linux生存手册记录了一些Linux系统的桌面用户在安装使用过程中可能遇到的问题及其解决方法。该手册将始终是“incomplete”的状态，因为它将会随着时间推移不断扩充和完善。由于内容繁多，推荐使用目录中的链接直接查看需要的内容。
 
 [1. Linux installation & settings 系统安装与设置](#1)
@@ -460,6 +463,22 @@ sudo systemctl restart systemd-logind.service
 ----------------------------------------------------------------
 
 <h3 id='command'> 2.4 自定义命令 </h3>
+Add the following contents to _~/.profile_:
+~~~
+export PATH="/media/uraplutonium/Workstation/Applications/upnbin:$PATH"
+~~~
+and put your own shell commands in that folder. For example:
+~~~
+#!/bin/bash
+# This script does nothing, but simply prints "Hello uraplutonium!" on the screen, and creates an empty file upntestfile in home folder.
+# dependencies:
+# [none]
+# usage:
+# upn-test
+
+echo Hello uraplutonium!
+touch ~/upntestfile
+~~~
 
 ----------------------------------------------------------------
 
@@ -671,7 +690,4 @@ crontab -l
 
 ----------------------------------------------------------------
 
-[comment]: <> (This is a comment, it will not be included)
-[comment]: <> (in  the output file unless you use it in)
-[comment]: <> (a reference style link.)
-[//]: <> (This is also a comment.)
+
