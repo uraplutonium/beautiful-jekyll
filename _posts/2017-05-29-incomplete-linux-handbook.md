@@ -10,17 +10,6 @@ tags: [linux]
 [TODO]: <> (中英双语)
 [TODO]: <> (引用)
 
-$$
-\sum_{i=1}^{100} x_i
-$$
-
-$$
-x_i
-$$
-
-$$1$$
-
-
 这份Linux生存手册记录了一些Linux系统的桌面用户在安装使用过程中可能遇到的问题及其解决方法。该手册将始终是“incomplete”的状态，因为它将会随着时间推移不断扩充和完善。由于内容繁多，推荐使用目录中的链接直接查看需要的内容。
 
 [1. Linux installation & settings 系统安装与设置](#1)
@@ -535,7 +524,8 @@ uraplutonium	ALL=(ALL) 	ALL
 <h3 id='apps'> 2.7 设置文件默认打开方式 </h3>
 
 #### 个人配置
-Add or modify the file *~/.local/share/applications/mimeapps.list* or *~/.local/share/applications/mimeinfo.cache*:
+Modify the file *~/.local/share/applications/mimeapps.list* or *~/.local/share/applications/mimeinfo.cache*. For example, we open all text and source code files by emacs24:  
+修改文件*~/.local/share/applications/mimeapps.list* 或 *~/.local/share/applications/mimeinfo.cache*。以使用emacs24打开所有的文本和源代码文件为例：  
 ~~~
 [Default Applications]
 text/plain=emacs24.desktop
@@ -561,17 +551,24 @@ application/x-perl=emacs24.desktop
 ~~~
 
 #### 全局配置
-Add or modify the following files:  
+Modify the following files:
+修改下列文件：  
 */etc/gnome/defaults.list*  
 */usr/share/applications/mimeinfo.cache*
 
 ----------------------------------------------------------------
 
 <h3 id='backspace'> 2.8 启用nautilus上一级目录的BackSpace快捷键 </h3>
+Modify the file *~/.config/nautilus/accels*:
+~~~
+(gtk_accel_path "<Actions>/ShellActions/Up" "BackSpace")
+~~~
 
 ----------------------------------------------------------------
 
 <h3 id='lenses'> 2.9 删除ubuntu unity桌面lenses </h3>
+Just remove or rename the corresponding lens files in */usr/share/unity/lenses/*.  
+删除或重命名/usr/share/unity/lenses/目录下对应的lens文件即可。
 
 ----------------------------------------------------------------
 
