@@ -447,7 +447,7 @@ sudo modprobe -r psmouse
 
 <h3 id='lid'> 2.3 ubuntu中合上屏幕后无操作 </h3>
 
-Modify the following line in file _/etc/systemd/logind.conf_:
+Modify the following line in file */etc/systemd/logind.conf*:
 ~~~
 #HandleLidSwitch=suspend
 ~~~
@@ -463,12 +463,12 @@ sudo systemctl restart systemd-logind.service
 ----------------------------------------------------------------
 
 <h3 id='command'> 2.4 自定义命令 </h3>
-Add the following contents to _~/.profile_:
+Add the following contents to *~/.profile*:
 ~~~
 export PATH="/media/uraplutonium/Workstation/Applications/upnbin:$PATH"
 ~~~
 and put your own shell commands in that folder and make the file executable.
-For example, the contents of _/media/uraplutonium/Workstation/Applications/upnbin/upn-test_ is as follow:
+For example, the contents of */media/uraplutonium/Workstation/Applications/upnbin/upn-test* is as follow:
 ~~~
 #!/bin/bash
 # This script does nothing, but simply prints "Hello uraplutonium!" on the screen, and creates an empty file upntestfile in home folder.
@@ -484,7 +484,7 @@ touch ~/upntestfile
 ----------------------------------------------------------------
 
 <h3 id='cent-ipv6'> 2.5 禁用CentOS7的IPv6和防火墙 </h3>
-Upstream employee Daniel Walsh recommends not disabling the ipv6 module, as that can cause issues with SELinux and other components, but adding the following to /etc/sysctl.conf:
+Upstream employee Daniel Walsh recommends not disabling the ipv6 module, as that can cause issues with SELinux and other components, but adding the following to */etc/sysctl.conf*:
 ~~~
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
@@ -510,10 +510,49 @@ systemctl stop firewalld
 ----------------------------------------------------------------
 
 <h3 id='sudoers'> 2.6 向sudo group中添加用户 </h3>
+Add after the following line in file */etc/sudoers*:
+~~~
+root	ALL=(ALL) 	ALL
+~~~
+with:
+~~~
+uraplutonium	ALL=(ALL) 	ALL
+~~~
 
 ----------------------------------------------------------------
 
 <h3 id='apps'> 2.7 设置文件默认打开方式 </h3>
+
+#### 个人配置
+Add or modify the file *~/.local/share/applications/mimeapps.list* or *~/.local/share/applications/mimeinfo.cache*:
+~~~
+[Default Applications]
+text/plain=emacs24.desktop
+text/x-tex=emacs24.desktop
+text/x-java=emacs24.desktop
+text/x-csrc=emacs24.desktop
+text/x-chdr=emacs24.desktop
+text/x-c=emacs24.desktop
+text/x-c++=emacs24.desktop
+text/x-python=emacs24.desktop
+text/xml=emacs24.desktop
+text/x-emacs-lisp=emacs24.desktop
+text/x-sql=emacs24.desktop
+text/english=emacs24.desktop
+text/x-makefile=emacs24.desktop
+text/x-dtd=emacs24.desktop
+text/mathml=emacs24.desktop
+text/x-moc=emacs24.desktop
+text/x-pascal=emacs24.desktop
+text/x-tcl=emacs24.desktop
+application/x-shellscript=emacs24.desktop
+application/x-perl=emacs24.desktop
+~~~
+
+#### 全局配置
+Add or modify the following files:  
+*/etc/gnome/defaults.list*  
+*/usr/share/applications/mimeinfo.cache*
 
 ----------------------------------------------------------------
 
