@@ -504,6 +504,7 @@ sudo systemctl restart systemd-logind.service
 <h3 id='catsystem'> 3.1 查看系统信息 </h3>
 
 #### Hardware 硬件
+
 | Commands                         | Description                   |
 | :------------------------------- | :---------------------------- |
 | service kudzu start (or restart) | 用硬件检测程序kuduz探测新硬件 |
@@ -518,6 +519,7 @@ sudo systemctl restart systemd-logind.service
 | dmesg /var/log/dmesg \| more     | 查看启动硬件检测信息日志      |
 
 #### 系统
+
 | Commands                | Description               |
 | :---------------------- | :------------------------ |
 | cat /etc/fedora-release | 查看fedora版本号          |
@@ -531,6 +533,7 @@ sudo systemctl restart systemd-logind.service
 | env                     | 查看环境变量              |
 
 #### 资源
+
 | Commands                    | Description                    |
 | :-------------------------- | :----------------------------- |
 | free -m                     | 查看内存使用量和交换区使用量   |
@@ -542,6 +545,7 @@ sudo systemctl restart systemd-logind.service
 | cat /proc/loadavg           | 查看系统负载                   |
 
 #### 磁盘和分区
+
 | Commands           | Description                   |
 | :----------------- | :---------------------------- |
 | mount \| column -t | 查看挂接的分区状态            |
@@ -551,6 +555,7 @@ sudo systemctl restart systemd-logind.service
 | dmesg \| grep IDE  | 查看启动时IDE设备检测状况     |
 
 #### 网络
+
 | Commands      | Description            |
 | :------------ | :--------------------- |
 | ifconfig      | 查看所有网络接口的属性 |
@@ -561,12 +566,14 @@ sudo systemctl restart systemd-logind.service
 | netstat -s    | 查看网络统计信息       |
 
 #### 进程
+
 | Commands | Description      |
 | :------- | :--------------- |
 | ps -ef   | 查看所有进程     |
 | top      | 实时显示进程状态 |
 
 #### 用户
+
 | Commands                | Description                       |
 | :---------------------- | :-------------------------------- |
 | w                       | 查看活动用户                      |
@@ -580,6 +587,7 @@ sudo systemctl restart systemd-logind.service
 | userdel -r centospub    | 删除用户名为 centospub 的一般用户 |
 
 #### 服务
+
 | Commands                   | Description            |
 | :------------------------- | :--------------------- |
 | chkconfig –list            | 列出所有系统服务       |
@@ -589,11 +597,13 @@ sudo systemctl restart systemd-logind.service
 | service sshd restart       | 重启服务               |
 
 #### 程序
+
 | Commands | Description          |
 | :------- | :------------------- |
 | rpm -qa  | 查看所有安装的软件包 |
 
 #### Linux查询目录使用空间
+
 | Commands       | Description                                                                           |
 | :------------- | :------------------------------------------------------------------------------------ |
 | du -sh dirname | 查看目录的使用空间                                                                    |
