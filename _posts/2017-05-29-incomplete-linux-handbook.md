@@ -183,7 +183,7 @@ sudo mount /dev/mapper/crypt /mnt
 ~~~
 vm.swappiness=10
 ~~~
- 
+
 ----------------------------------------------------------------
 
 <h3 id='swap-on-off'> 1.6 打开和关闭交换分区 </h3>
@@ -505,20 +505,22 @@ sudo systemctl restart systemd-logind.service
 
 + Hardware 硬件
 
-| Commands       | Description         |
-| :--------------- | :------------------ |
-| service kudzu start (or restart)         | 用硬件检测程序kuduz探测新硬件          |
-| cat /proc/cpuinfo         | 查看CPU信息         |
-| cat /proc/pci         | 查看板卡信息         |
-| lspci         | 查看PCI信息         |
-| cat /proc/meminfo         | 查看内存信息         |
-| cat /proc/bus/usb/devices         | 查看USB设备         |
-| cat /proc/bus/input/devices         | 查看键盘和鼠标         |
-| fdisk & disk – l & df         | 查看系统硬盘信息和使用情况         |
-| cat /proc/interrupts         | 查看各设备的中断请求(IRQ)         |
-| dmesg /var/log/dmesg \| more         | 查看启动硬件检测信息日志         |
 
-** 系统
+| Commands                         | Description                   |
+| :------------------------------- | :---------------------------- |
+| service kudzu start (or restart) | 用硬件检测程序kuduz探测新硬件 |
+| cat /proc/cpuinfo                | 查看CPU信息                   |
+| cat /proc/pci                    | 查看板卡信息                  |
+| lspci                            | 查看PCI信息                   |
+| cat /proc/meminfo                | 查看内存信息                  |
+| cat /proc/bus/usb/devices        | 查看USB设备                   |
+| cat /proc/bus/input/devices      | 查看键盘和鼠标                |
+| fdisk & disk – l & df            | 查看系统硬盘信息和使用情况    |
+| cat /proc/interrupts             | 查看各设备的中断请求(IRQ)     |
+| dmesg /var/log/dmesg \| more     | 查看启动硬件检测信息日志      |
+
+
++ 系统
 $ cat /etc/fedora-release # 查看fedora版本号
 $ uname -a # 查看内核/操作系统/CPU信息
 $ head -n 1 /etc/issue # 查看操作系统版本
