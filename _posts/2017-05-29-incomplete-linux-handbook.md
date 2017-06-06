@@ -503,9 +503,7 @@ sudo systemctl restart systemd-logind.service
 
 <h3 id='catsystem'> 3.1 查看系统信息 </h3>
 
-+ Hardware 硬件
-
-
+#### Hardware 硬件
 | Commands                         | Description                   |
 | :------------------------------- | :---------------------------- |
 | service kudzu start (or restart) | 用硬件检测程序kuduz探测新硬件 |
@@ -519,8 +517,7 @@ sudo systemctl restart systemd-logind.service
 | cat /proc/interrupts             | 查看各设备的中断请求(IRQ)     |
 | dmesg /var/log/dmesg \| more     | 查看启动硬件检测信息日志      |
 
-+ 系统
-
+#### 系统
 | Commands                | Description               |
 | :---------------------- | :------------------------ |
 | cat /etc/fedora-release | 查看fedora版本号          |
@@ -533,8 +530,7 @@ sudo systemctl restart systemd-logind.service
 | lsmod                   | 列出加载的内核模块        |
 | env                     | 查看环境变量              |
 
-+ 资源
-
+#### 资源
 | Commands                    | Description                    |
 | :-------------------------- | :----------------------------- |
 | free -m                     | 查看内存使用量和交换区使用量   |
@@ -545,8 +541,7 @@ sudo systemctl restart systemd-logind.service
 | uptime                      | 查看系统运行时间、用户数、负载 |
 | cat /proc/loadavg           | 查看系统负载                   |
 
-+ 磁盘和分区
-
+#### 磁盘和分区
 | Commands           | Description                   |
 | :----------------- | :---------------------------- |
 | mount \| column -t | 查看挂接的分区状态            |
@@ -555,8 +550,7 @@ sudo systemctl restart systemd-logind.service
 | hdparm -i /dev/hda | 查看磁盘参数(仅适用于IDE设备) |
 | dmesg \| grep IDE  | 查看启动时IDE设备检测状况     |
 
-+ 网络
-
+#### 网络
 | Commands      | Description            |
 | :------------ | :--------------------- |
 | ifconfig      | 查看所有网络接口的属性 |
@@ -566,56 +560,51 @@ sudo systemctl restart systemd-logind.service
 | netstat -antp | 查看所有已经建立的连接 |
 | netstat -s    | 查看网络统计信息       |
 
-** 进程
+#### 进程
+| Commands | Description      |
+| :------- | :--------------- |
+| ps -ef   | 查看所有进程     |
+| top      | 实时显示进程状态 |
 
-| Commands                         | Description                   |
-| :------------------------------- | :---------------------------- |
-| ps -ef | 查看所有进程 |
-| top | 实时显示进程状态 |
+#### 用户
+| Commands                | Description                       |
+| :---------------------- | :-------------------------------- |
+| w                       | 查看活动用户                      |
+| id                      | 查看指定用户信息                  |
+| last                    | 查看用户登录日志                  |
+| cut -d: -f1 /etc/passwd | 查看系统所有用户                  |
+| cut -d: -f1 /etc/group  | 查看系统所有组                    |
+| crontab -l              | 查看当前用户的计划任务            |
+| useradd centospub       | 建立用户名为 centospub 的一般用户 |
+| passwd centospub        | 为用户 centospub 设置密码         |
+| userdel -r centospub    | 删除用户名为 centospub 的一般用户 |
 
-** 用户
+#### 服务
+| Commands                   | Description            |
+| :------------------------- | :--------------------- |
+| chkconfig –list            | 列出所有系统服务       |
+| chkconfig –list \| grep on | 列出所有启动的系统服务 |
+| service sshd start         | 启动服务               |
+| service sshd stop          | 停止服务               |
+| service sshd restart       | 重启服务               |
 
-| Commands                         | Description                   |
-| :------------------------------- | :---------------------------- |
-| w | 查看活动用户 |
-| id | 查看指定用户信息 |
-| last | 查看用户登录日志 |
-| cut -d: -f1 /etc/passwd | 查看系统所有用户 |
-| cut -d: -f1 /etc/group | 查看系统所有组 |
-| crontab -l | 查看当前用户的计划任务 |
-| useradd centospub | 建立用户名为 centospub 的一般用户 |
-| passwd centospub | 为用户 centospub 设置密码 |
-| userdel -r centospub | 删除用户名为 centospub 的一般用户 |
+#### 程序
+| Commands | Description          |
+| :------- | :------------------- |
+| rpm -qa  | 查看所有安装的软件包 |
 
-** 服务
-
-| Commands                         | Description                   |
-| :------------------------------- | :---------------------------- |
-| chkconfig –list | 列出所有系统服务 |
-| chkconfig –list | grep on | 列出所有启动的系统服务 |
-| service sshd start | 启动服务 |
-| service sshd stop | 停止服务 |
-| service sshd restart | 重启服务 |
-
-** 程序
-
-| Commands                         | Description                   |
-| :------------------------------- | :---------------------------- |
-| rpm -qa | 查看所有安装的软件包 |
-
-** Linux查询目录使用空间
-
-| Commands                         | Description                   |
-| :------------------------------- | :---------------------------- |
-| du -sh dirname | 查看目录的使用空间 |
-| du -s | 仅显示总计 |
-| du -h | 以k、m、g为单位，提高信息的可读性。 kb、mb、gb是以1024为换算单位， -h以1000为换算单位 |
-| du -a | 显示全部目录和其次目录下的每个档案所占的磁碟空间 |
-| du -b | 大小用bytes来表示(预设值为k bytes) |
-| du -c | 最后再加上总计(预设值) |
-| du -l | 计算所有档案大小 |
-| du -x | 只计算同属同一个档案系统的档案 |
-| du -L | 计算所有的档案大小 |
+#### Linux查询目录使用空间
+| Commands       | Description                                                                           |
+| :------------- | :------------------------------------------------------------------------------------ |
+| du -sh dirname | 查看目录的使用空间                                                                    |
+| du -s dirname  | 仅显示总计                                                                            |
+| du -h dirname  | 以k、m、g为单位，提高信息的可读性。 kb、mb、gb是以1024为换算单位， -h以1000为换算单位 |
+| du -a dirname  | 显示全部目录和其次目录下的每个档案所占的磁碟空间                                      |
+| du -b dirname  | 大小用bytes来表示(预设值为k bytes)                                                    |
+| du -c dirname  | 最后再加上总计(预设值)                                                                |
+| du -l dirname  | 计算所有档案大小                                                                      |
+| du -x dirname  | 只计算同属同一个档案系统的档案                                                        |
+| du -L dirname  | 计算所有的档案大小                                                                    |
 
 ----------------------------------------------------------------
 
