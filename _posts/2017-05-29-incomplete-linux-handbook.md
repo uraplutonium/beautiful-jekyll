@@ -484,6 +484,28 @@ touch ~/upntestfile
 ----------------------------------------------------------------
 
 <h3 id='cent-ipv6'> 2.5 禁用CentOS7的IPv6和防火墙 </h3>
+Upstream employee Daniel Walsh recommends not disabling the ipv6 module, as that can cause issues with SELinux and other components, but adding the following to /etc/sysctl.conf:
+~~~
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+~~~
+
+To disable in the running system:
+~~~
+echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
+echo 1 > /proc/sys/net/ipv6/conf/default/disable_ipv6
+~~~
+or
+~~~
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sysctl -w net.ipv6.conf.default.disable_ipv6=1
+~~~
+
+To disable the firewall in the runing CentOS:
+~~~
+systemctl disable iptables.service
+systemctl stop firewalld
+~~~
 
 ----------------------------------------------------------------
 
