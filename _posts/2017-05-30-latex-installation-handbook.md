@@ -34,9 +34,9 @@ beamer不能使用dvipdfmx来生成pdf所以对中文标签的支持不能通过
 \DeclareOptionBeamer{cjk}{
 \def\beamer@hypercjk{\hypersetup{CJKbookmarks=true}}
 \def\beamer@activecjk{
-% Activate all >128 characters.
+'%' Activate all >128 characters.
 \count@=127
-\@whilenum\count@<255 \do{%
+\@whilenum\count@<255 \do{'%'
 \advance\count@ by 1
 \lccode`\~=\count@
 \catcode\count@=\active
@@ -48,22 +48,22 @@ beamer不能使用dvipdfmx来生成pdf所以对中文标签的支持不能通过
 
 在beamer3.06中是在178行，把
 ~~~
-% Activate all >128 characters.
+'%' Activate all >128 characters.
 ~~~
 改成
 ~~~
-% Activate all >＝0x80 characters.
+'%' Activate all >＝0x80 characters.
 ~~~
 
 然后在上文的最后一个}后加上下面几句：
 ~~~
 \DeclareOptionBeamer{CJKutf8}{\ExecuteOptionsBeamer{cjkutf8}}
-\DeclareOptionBeamer{cjkutf8}{%
+\DeclareOptionBeamer{cjkutf8}{'%'
 \PassOptionsToPackage{unicode}{hyperref}
 \def\beamer@activecjk{
-% Activate all characters >= 0x80.
+'%' Activate all characters >= 0x80.
 \count@=127
-\@whilenum\count@<254 \do{%
+\@whilenum\count@<254 \do{'%'
 \advance\count@ by 1
 \lccode`\~=\count@
 \catcode\count@=\active
