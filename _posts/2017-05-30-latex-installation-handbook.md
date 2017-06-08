@@ -47,7 +47,7 @@ beamer不能使用dvipdfmx来生成pdf所以对中文标签的支持不能通过
 ```
 
 在beamer3.06中是在178行，把
-```latx
+```latex
 % Activate all >128 characters.
 ```
 改成
