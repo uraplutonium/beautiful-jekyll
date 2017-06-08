@@ -8,3 +8,4 @@ tags: [decentration]
 ---
 
 + [IPFS Alpha Demo](https://gateway.ipfs.io/ipfs/QmeK22pqtVT4yNawXcHbZh2fDrncdYHQbepjrxFmD8tGYZ)
++ [TED: The next Internet Revolution - Juan Benet](https://gateway.ipfs.io/ipfs/QmUgTn3nvJL1X5a1c7qgbPQw6Y6gCCTr9QTaUj5d8bkMBk)
