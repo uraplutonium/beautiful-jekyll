@@ -8,7 +8,7 @@ tags: [latex]
 ---
 
 > This page is stil under construction...  
-> 该页面仍在建设中...
+> 该页面仍在建设中...1
 
 ## TeX Live 2014 profile config
 
@@ -34,7 +34,7 @@ beamer不能使用dvipdfmx来生成pdf所以对中文标签的支持不能通过
 \DeclareOptionBeamer{cjk}{
 \def\beamer@hypercjk{\hypersetup{CJKbookmarks=true}}
 \def\beamer@activecjk{
-\% Activate all >128 characters.
+% Activate all >128 characters.
 \count@=127
 \@whilenum\count@<255 \do{\% 
 \advance\count@ by 1
