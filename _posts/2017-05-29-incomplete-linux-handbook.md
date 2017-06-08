@@ -62,15 +62,15 @@ tags: [linux]
 
 使用dd将已下载好的linux系统镜像[os-image].iso写入到优盘上：
 
-~~~
+```
 sudo dd if=[os-image].iso of=/dev/sdx bs=1M
-~~~
+```
 
 优盘的设备文件为/dev/sdx，其中编号x可使用fdisk查询：
 
-~~~
+```
 sudo fdisk -l
-~~~
+```
 
 ----------------------------------------------------------------
 
@@ -93,7 +93,7 @@ GRUB2 的/usr/sbin/grub2/grub2-mkconfig会根据/etc/default/grub文件和/etc/g
 #### 为linux添加grub启动项
 
 在/etc/grub.d/中添加启动脚本11_linux：
-~~~
+```
 #!/bin/sh -e
 echo "Adding my custom Linux to GRUB 2"
 cat << EOF
@@ -103,13 +103,13 @@ linux /boot/vmlinuz
 initrd /boot/initrd.img
 }
 EOF
-~~~
+```
 menuentry一行为显示在GRUB2启动界面上的名称，set一行用来标示启动的硬盘和分区，特别要注意与GRUB不同的是，在GRUB2中硬盘的分区是从1开始计数的，而非GRUB中的0。但硬盘编号依然是从0开始计数的。例如(hd0,5)标示第1块硬盘上的第5个分区。
 
 #### 为windows添加grub启动项
 
 在/etc/grub.d/中添加启动脚本12_windows：
-~~~
+```
 #!/bin/sh -e
 echo "Adding Windows 7 to GRUB 2 menu"
 cat << EOF
@@ -118,31 +118,31 @@ set root=(hd0,1)
 chainloader (hd0,1)+1
 }
 EOF
-~~~
+```
 
 #### 生成/boot/grub2/grub.cfg
 
 为添加的启动脚本添加执行权限：
-~~~
+```
 sudo chmod a+x /etc/grub.d/11_linux
 sudo chmod a+x /etc/grub.d/12_windows
-~~~
+```
 
 生成/boot/grub2/grub.cfg：
-~~~
+```
 sudo /usr/sbin/grub2/grub2-mkconfig --output=/boot/grub2/grub.cfg
-~~~
+```
 注意此处若不添加output参数则会将生成的grub.cfg输出在默认输出设备（即屏幕）上。
 
 将grub设置写入硬盘分区：
-~~~
+```
 sudo grub-install /dev/sda
-~~~
+```
 
 完成。重新启动：
-~~~
+```
 sudo reboot
-~~~
+```
 
 ----------------------------------------------------------------
 
@@ -175,10 +175,10 @@ tmpfs /tmp tmpfs defaults,exec,nosuid 0 0
 
 <h3 id='luks'> 1.4 挂载加密分区 </h3>
 要挂载加密的“crypt-luks”格式的加密ext4分区/dev/sdc1，执行以下指令以挂载至/mnt路径下：
-~~~
+```
 sudo cryptsetup -v luksOpen /dev/sdc1 crypt
 sudo mount /dev/mapper/crypt /mnt
-~~~
+```
 
 ----------------------------------------------------------------
 
@@ -186,50 +186,50 @@ sudo mount /dev/mapper/crypt /mnt
 
 在/etc/sysctl.conf末尾加入下列内容，可减少swap的使用，以加快系统运行：
 
-~~~
+```
 vm.swappiness=10
-~~~
+```
 
 ----------------------------------------------------------------
 
 <h3 id='swap-on-off'> 1.6 打开和关闭交换分区 </h3>
 打开和关闭所有交换分区的命令分别为swapon和swapoff：
 
-~~~
+```
 sudo swapon -a
 sudo swapoff -a
-~~~
+```
 
 ----------------------------------------------------------------
 
 <h3 id='startup'> 1.7 开机后以系统为父进程自动执行命令 </h3>
 
 有些命令或工具需要以系统为父进程启动，以[星际文件系统IPFS](https://ipfs.io/)和[去中心化云存储平台Sia](https://sia.tech/)为例，使用setsid命令启动：
-~~~
+```
 setsid ipfs daemon
 setsid /home/uraplutonium/Sia-v0.6.0-beta-linux-amd64/siad -d /home/uraplutonium/Sia
-~~~
+```
 
 若需要开机后自动以系统为父进程自动启动后台进程，需要在/etc/rc.local中的exit 0之前插入以下内容：
-~~~
+```
 su - uraplutonium -c "export IPFS_PATH=/media/uraplutonium/Extension/IPFS; setsid ipfs daemon"
 su - uraplutonium -c "setsid /home/Sia-v0.6.0-beta-linux-amd64/siad -d /home/uraplutonium/Sia"
-~~~
+```
 其中uraplutonium为管理员用户名。
 
 ----------------------------------------------------------------
 
 <h3 id='cent-source'> 1.8 修改CentOS软件源 </h3>
 先重命名原CentOS-Base软件源：
-~~~
+```
 sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-~~~
+```
 
 然后，将网易163软件源CentOS6-Base-163.repo或sohu软件源CentOS-Base-sohu.repo文件放入/etc/yum.repos.d/，并执行：
-~~~
+```
 sudo yum clean all
 sudo yum makecache
-~~~
+```
 
 ----------------------------------------------------------------
 
@@ -237,9 +237,9 @@ sudo yum makecache
 
 <h3 id='show-startup'> 2.1 显示所有开机自动启动项目 </h3>
 执行下列命令以在“Startup Applications Preferences”中显示隐藏的自动启动项目：
-~~~
+```
 sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
-~~~
+```
 
 可能的默认启动项目包括：
 
@@ -441,9 +441,9 @@ Status: unwanted until you use GNOME fallback session. Unneeded for GNOME Shell 
 
 <h3 id='lock-touchpad'> 2.2 锁定笔记本触控板 </h3>
 在终端中输入：
-~~~
+```
 sudo modprobe -r psmouse
-~~~
+```
 即可锁定触控板。该命令仅在下次重启前有效。
 
 ----------------------------------------------------------------
@@ -451,28 +451,28 @@ sudo modprobe -r psmouse
 <h3 id='lid'> 2.3 ubuntu中合上屏幕后无操作 </h3>
 
 Modify the following line in file */etc/systemd/logind.conf*:
-~~~
+```
 #HandleLidSwitch=suspend
-~~~
+```
 to:
-~~~
+```
 HandleLidSwitch=ignore
-~~~
+```
 and restart the service by:
-~~~
+```
 sudo systemctl restart systemd-logind.service
-~~~
+```
 
 ----------------------------------------------------------------
 
 <h3 id='command'> 2.4 自定义命令 </h3>
 Add the following contents to *~/.profile*:
-~~~
+```
 export PATH="/media/uraplutonium/Workstation/Applications/upnbin:$PATH"
-~~~
+```
 and put your own shell commands in that folder and make the file executable.
 For example, the contents of */media/uraplutonium/Workstation/Applications/upnbin/upn-test* is as follow:
-~~~
+```
 #!/bin/bash
 # This script does nothing, but simply prints "Hello uraplutonium!" on the screen, and creates an empty file upntestfile in home folder.
 # dependencies:
@@ -482,45 +482,45 @@ For example, the contents of */media/uraplutonium/Workstation/Applications/upnbi
 
 echo Hello uraplutonium!
 touch ~/upntestfile
-~~~
+```
 
 ----------------------------------------------------------------
 
 <h3 id='cent-ipv6'> 2.5 禁用CentOS7的IPv6和防火墙 </h3>
 Upstream employee Daniel Walsh recommends not disabling the ipv6 module, as that can cause issues with SELinux and other components, but adding the following to */etc/sysctl.conf*:
-~~~
+```
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
-~~~
+```
 
 To disable in the running system:
-~~~
+```
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 echo 1 > /proc/sys/net/ipv6/conf/default/disable_ipv6
-~~~
+```
 or
-~~~
+```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
-~~~
+```
 
 To disable the firewall in the runing CentOS:
-~~~
+```
 systemctl disable iptables.service
 systemctl stop firewalld
-~~~
+```
 
 ----------------------------------------------------------------
 
 <h3 id='sudoers'> 2.6 向sudo group中添加用户 </h3>
 Add after the following line in file */etc/sudoers*:
-~~~
+```
 root	ALL=(ALL) 	ALL
-~~~
+```
 with:
-~~~
+```
 uraplutonium	ALL=(ALL) 	ALL
-~~~
+```
 
 ----------------------------------------------------------------
 
@@ -529,7 +529,7 @@ uraplutonium	ALL=(ALL) 	ALL
 #### Local configuration 局部配置
 Modify the file *~/.local/share/applications/mimeapps.list* or *~/.local/share/applications/mimeinfo.cache*. For example, we open all text and source code files by emacs24:  
 修改文件*~/.local/share/applications/mimeapps.list* 或 *~/.local/share/applications/mimeinfo.cache*。以使用emacs24打开所有的文本和源代码文件为例：  
-~~~
+```
 [Default Applications]
 text/plain=emacs24.desktop
 text/x-tex=emacs24.desktop
@@ -551,7 +551,7 @@ text/x-pascal=emacs24.desktop
 text/x-tcl=emacs24.desktop
 application/x-shellscript=emacs24.desktop
 application/x-perl=emacs24.desktop
-~~~
+```
 
 #### Global configuration 全局配置
 Modify the following files:  
@@ -564,9 +564,9 @@ Modify the following files:
 <h3 id='backspace'> 2.8 启用nautilus上一级目录的BackSpace快捷键 </h3>
 Modify the file *~/.config/nautilus/accels*:  
 修改文件*~/.config/nautilus/accels*：  
-~~~
+```
 (gtk_accel_path "<Actions>/ShellActions/Up" "BackSpace")
-~~~
+```
 
 ----------------------------------------------------------------
 
@@ -579,7 +579,7 @@ Just remove or rename the corresponding lens files in */usr/share/unity/lenses/*
 <h3 id='folders'> 2.10 更改Gnome桌面默认文件夹地址 </h3>
 Modify the file */home/uraplutonium/.config/user-dirs.dirs*:  
 修改文件*/home/uraplutonium/.config/user-dirs.dirs*：
-~~~
+```
 # This file is written by xdg-user-dirs-update
 # If you want to change or add directories, just edit the line you're
 # interested in. All local changes will be retained on the next run
@@ -594,7 +594,7 @@ XDG_PUBLICSHARE_DIR="/media/uraplutonium/Workstation/Sync/Public"
 XDG_DOCUMENTS_DIR="/media/uraplutonium/Workstation/Library"
 XDG_MUSIC_DIR="/media/uraplutonium/Workstation/Music"
 XDG_PICTURES_DIR="$HOME/Pictures"
-~~~
+```
 
 ----------------------------------------------------------------
 
@@ -734,13 +734,13 @@ crontab可以定时、周期性地执行命令或脚本。
 以“每周一凌晨3点执行备份文件的脚本upn-backup.sh”为例：
 #### 首先，安装crontab软件：
 
-~~~
+```
 sudo apt-get install corntab
-~~~
+```
 
 #### 然后，创建crontab文件（~/crontab-file）：
 
-~~~
+```
 # Edit this file to introduce tasks to be run by cron.
 # 
 # Each task to run has to be defined through a single line
@@ -765,20 +765,20 @@ sudo apt-get install corntab
 # m h  dom mon dow   command
 
 0 3	* * 1	/home/uraplutonium/upn-backup.sh
-~~~
+```
 
 如默认crontab文件的注释所说，每一行的前5个数字分别代表执行命令的分钟（0-59）、小时（0-23）、日期（1-31）、月份（1-12）和星期（1-7）。星号“*”代表不作限制。“0 3	* * 1”代表每个月、每个星期一的03点00分执行命令。
 
 #### 最后，在终端中输入下列语句来加载crontab文件：
 
-~~~
+```
 crontab ~/crontab-file
-~~~
+```
 
 要查看是否设置成功，可以执行下列命令来查看当前所有的计划任务：
-~~~
+```
 crontab -l
-~~~
+```
 
 ----------------------------------------------------------------
 
