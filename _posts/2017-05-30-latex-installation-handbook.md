@@ -29,14 +29,14 @@ export XINDY_LIBDIR="$TEXLIVE_BIN"
 beamer不能使用dvipdfmx来生成pdf所以对中文标签的支持不能通过dvipdfmx来完成。CJKutf8可以很好的完成中文标签tounicode的转换，但是beamer.cls中的定义存在问题。
 打开*/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/beamer.cls*，找到
 
-```
+~~~
 \DeclareOptionBeamer{CJK}{\ExecuteOptionsBeamer{cjk}}
 \DeclareOptionBeamer{cjk}{
 \def\beamer@hypercjk{\hypersetup{CJKbookmarks=true}}
 \def\beamer@activecjk{
-% Activate all >128 characters.
+\% Activate all >128 characters.
 \count@=127
-\@whilenum\count@<255 \do{%
+\@whilenum\count@<255 \do{\% 
 \advance\count@ by 1
 \lccode`\~=\count@
 \catcode\count@=\active
@@ -44,7 +44,7 @@ beamer不能使用dvipdfmx来生成pdf所以对中文标签的支持不能通过
 }
 }
 }
-```
+~~~
 
 在beamer3.06中是在178行，把
 ~~~
