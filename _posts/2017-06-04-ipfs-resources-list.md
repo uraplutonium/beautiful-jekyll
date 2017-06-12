@@ -8,6 +8,7 @@ tags: [decentration]
 ---
 
 + [IPFS Alpha Demo 2015](https://gateway.ipfs.io/ipfs/QmeK22pqtVT4yNawXcHbZh2fDrncdYHQbepjrxFmD8tGYZ)
+  An overview and demo of the go-ipfs alpha. 
 + [TED: The next Internet Revolution - Juan Benet](https://gateway.ipfs.io/ipfs/QmUgTn3nvJL1X5a1c7qgbPQw6Y6gCCTr9QTaUj5d8bkMBk)
 + [Distributed Apps with IPFS 2016](https://gateway.ipfs.io/ipfs/QmQM8y88GPFKjjYWZNJ8oznBYXjuH88JdmCeXgCTNprvgE)
 + [IPFS Hands on Introduction 2015](https://gateway.ipfs.io/ipfs/QmSntc8JNM2c9QUKsC1Jf98HAbWgWiPCCq45US9nqCMAfC)
