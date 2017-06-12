@@ -13,7 +13,7 @@ It aims to make the web faster, safer, and more open.
 IPFS enables completely decentralized and distributed apps.
 And it now supports fully dynamic apps, like real-time chat!
 
-+ [IPFS Alpha Demo 2015](https://gateway.ipfs.io/ipfs/QmeK22pqtVT4yNawXcHbZh2fDrncdYHQbepjrxFmD8tGYZ)
+## [IPFS Alpha Demo 2015](https://gateway.ipfs.io/ipfs/QmeK22pqtVT4yNawXcHbZh2fDrncdYHQbepjrxFmD8tGYZ)
 
 An overview and demo of the go-ipfs alpha.
 
