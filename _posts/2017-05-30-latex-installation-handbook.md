@@ -6,7 +6,6 @@ image: /ico/icon-latex.png
 #bigimg: /img/background.png
 tags: [latex]
 comments: true
-commentitPath: commentsfile
 ---
 
 > This page is stil under construction...  
