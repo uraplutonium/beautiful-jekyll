@@ -10,7 +10,7 @@ tags: [latex]
 > This page is stil under construction...  
 > 该页面仍在建设中...1
 
-## TeX Live 2014 profile config 2
+## TeX Live 2014 profile config 3
 
 Add the following contents to *~/.profile*:
 ```
@@ -36,7 +36,7 @@ beamer不能使用dvipdfmx来生成pdf所以对中文标签的支持不能通过
 \def\beamer@activecjk{
 % Activate all >128 characters.
 \count@=127
-\@whilenum\count@<255 \do{%
+\@whilenum\count@<255 \do{'%'
 \advance\count@ by 1
 \lccode`\~=\count@
 \catcode\count@=\active
