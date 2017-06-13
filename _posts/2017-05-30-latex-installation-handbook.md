@@ -5,6 +5,7 @@ subtitle: LaTeX安装手册
 image: /ico/icon-latex.png
 #bigimg: /img/background.png
 tags: [latex]
+comments: true
 ---
 
 > This page is stil under construction...  
