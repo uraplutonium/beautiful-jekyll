@@ -42,10 +42,6 @@ layout: base
         {% endif %}
       </ul>
 
-
-      
-
-      
       {% if page.comments %}
       <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
       <div id="commentit"></div>
@@ -67,7 +63,7 @@ layout: base
       {% endif %}
 
       {%if page.comments %}
-      {% assign sortedcomments = (page.comments | sort:'date') %}
+      {% assign sorted_comments = (page.comments) %}
       {% endif %}
 
 
