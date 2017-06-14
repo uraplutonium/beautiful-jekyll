@@ -3,8 +3,24 @@ layout: post
 title: IPFS(InterPlanetary File System) resources list
 subtitle: 星际文件系统资源列表
 image: /ico/icon-ipfs.png
-#bigimg: /img/path.jpg
-tags: [decentration]
+tags:
+  - decentration
+comments:
+  - author:
+      type: full
+      displayName: uraplutonium
+      url: 'https://github.com/uraplutonium'
+      picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
+    content: tessssst
+    date: 2017-06-14T01:47:08.373Z
+  - author:
+      type: full
+      displayName: uraplutonium
+      url: 'https://github.com/uraplutonium'
+      picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
+    content: this is a comment
+    date: 2017-06-14T01:50:10.858Z
+
 ---
 
 The InterPlanetary File System (IPFS) is a new hypermedia distribution protocol, addressed by content and identities.
