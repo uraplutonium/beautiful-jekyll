@@ -60,16 +60,15 @@ layout: base
 	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
 	})();
       </script>
-      {% endif %}
-
-      {%if page.comments %}
       {% assign sorted_comments = (page.comments) %}
       {% endif %}
       
       {% for c in sorted_comments %}
       <div class="media">
+	<div style=float:left>
+	  <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="40" width="40">
+	</div>
 	<div>
-	  <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="42" width="42">
             <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
             on {{ c.date | date_to_string }}
 	    </br>
