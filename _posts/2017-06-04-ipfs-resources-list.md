@@ -27,6 +27,13 @@ comments:
       picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
     content: ipfs ipfs
     date: 2017-06-14T01:57:25.623Z
+  - author:
+      type: github
+      displayName: Veviz
+      url: 'https://github.com/Veviz'
+      picture: 'https://avatars0.githubusercontent.com/u/6380826?v=3&s=73'
+    content: 'Test,test,test...'
+    date: 2017-06-14T02:02:07.327Z
 
 ---
 
