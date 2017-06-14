@@ -72,22 +72,3 @@ This is a Hands on Introduction to IPFS.
 
 Recorded at the Silicon Valley Ethereum Meetup - October 22nd, 2016
 
-
-{% assign sorted_comments = (page.comments | sort: 'date') %}
-
-{% for c in sorted_comments %}
-  <div class="media">
-    <div class="media-left">
-      <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
-    </div>
-    <div class="media-body">
-      <p class="text-muted">
-        <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
-        on {{ c.date | date_to_string }}
-      </p>
-      <p>{{ c.content | newline_to_br }}</p>
-    </div>
-  </div>
-{% else %}
-  There are no comments on this post.
-{% endfor %}
