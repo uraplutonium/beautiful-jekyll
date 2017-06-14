@@ -64,3 +64,6 @@ This is a Hands on Introduction to IPFS.
 ### 5. [The Decentralized Web, IPFS and Filecoin 2016](https://gateway.ipfs.io/ipfs/QmZZupEgyT5iRsA13wToqYWVEzpujB5TeBJnUNkCdgDvfe)
 
 Recorded at the Silicon Valley Ethereum Meetup - October 22nd, 2016
+
+
+      {% assign sorted_comments = (page.comments | sort: 'date') %}
