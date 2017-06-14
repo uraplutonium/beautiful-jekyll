@@ -65,7 +65,10 @@ layout: base
 	})();
       </script>
 
-      {% assign sorted_comments = (page.comments) %}
+      {% assign sorted_comments = (page.comments) %}<script type="text/javascript">
+	/** CONFIGURATION VARIABLES **/
+	var commentitsss = '{{ page.comments }}';
+      </script>
       
       {% endif %}
 
