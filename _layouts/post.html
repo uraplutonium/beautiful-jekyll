@@ -1,6 +1,5 @@
 ---
 layout: base
-comments:
 ---
 
 {% include header.html type="post" %}
@@ -66,7 +65,7 @@ comments:
 	})();
       </script>
 
-      {% assign sorted_comments = (page.comments | sort: 'date') %}
+      {% assign sorted_comments = (page.comments) %}
       
       {% endif %}
 
