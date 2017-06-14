@@ -13,6 +13,13 @@ comments:
       picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
     content: tessssst
     date: 2017-06-14T01:47:08.373Z
+  - author:
+      type: full
+      displayName: uraplutonium
+      url: 'https://github.com/uraplutonium'
+      picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
+    content: this is a comment
+    date: 2017-06-14T01:50:10.858Z
 
 ---
 
