@@ -43,9 +43,6 @@ layout: base
       </ul>
 
 
-    {%if page.comments %}
-    {% assign sorted_comments = (page.comments | sort: 'date') %}
-      {% endif %}
       
 
       
@@ -69,6 +66,9 @@ layout: base
       </script>
       {% endif %}
 
+    {%if page.comments %}
+    {% assign sorted_comments = (page.comments | sort: 'date') %}
+      {% endif %}
     {% for c in sorted_comments %}
     <div class="media">
       <div class="media-left">
