@@ -69,7 +69,7 @@ layout: base
       {% for c in sorted_comments %}
       <div class="media">
 	<div>
-	  <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
+	  <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="42" width="42">
             <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
             on {{ c.date | date_to_string }}
 	  <p>{{ c.content | newline_to_br }}</p>
