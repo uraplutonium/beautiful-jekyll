@@ -41,6 +41,19 @@ comments:
       picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
     content: test2
     date: 2017-06-14T02:42:50.107Z
+  - author:
+      type: full
+      displayName: uraplutonium
+      url: 'https://github.com/uraplutonium'
+      picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
+    content: >-
+      The InterPlanetary File System (IPFS) is a new hypermedia distribution
+      protocol, addressed by content and identities. IPFS enables the creation
+      of completely distributed applications. It aims to make the web faster,
+      safer, and more open. IPFS enables completely decentralized and
+      distributed apps. And it now supports fully dynamic apps, like real-time
+      chat!
+    date: 2017-06-14T03:16:50.520Z
 
 ---
 
