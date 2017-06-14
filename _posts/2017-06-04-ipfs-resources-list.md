@@ -20,6 +20,13 @@ comments:
       picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
     content: this is a comment
     date: 2017-06-14T01:50:10.858Z
+  - author:
+      type: full
+      displayName: uraplutonium
+      url: 'https://github.com/uraplutonium'
+      picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
+    content: ipfs ipfs
+    date: 2017-06-14T01:57:25.623Z
 
 ---
 
