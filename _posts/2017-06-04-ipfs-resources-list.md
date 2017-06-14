@@ -34,6 +34,13 @@ comments:
       picture: 'https://avatars0.githubusercontent.com/u/6380826?v=3&s=73'
     content: 'Test,test,test...'
     date: 2017-06-14T02:02:07.327Z
+  - author:
+      type: full
+      displayName: uraplutonium
+      url: 'https://github.com/uraplutonium'
+      picture: 'https://avatars2.githubusercontent.com/u/5404452?v=3&s=73'
+    content: test2
+    date: 2017-06-14T02:42:50.107Z
 
 ---
 
