@@ -64,9 +64,12 @@ layout: base
 	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
 	})();
       </script>
+
+
+      {% assign sorted_comments = (page.comments | sort: 'date') %}
+      
       {% endif %}
 
-    {% assign sorted_comments = (page.comments | sort: 'date') %}
       
     </div>
   </div>
