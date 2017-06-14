@@ -70,10 +70,7 @@ layout: base
       <div class="media">
 	<div>
 	  <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
-	</div>
-	
-	<div>
-	  <p class="text-muted">
+	  <p>
             <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
             on {{ c.date | date_to_string }}
 	  </p>
