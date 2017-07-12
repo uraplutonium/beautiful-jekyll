@@ -842,6 +842,17 @@ proxy=http://ip_address:port
 
 <h3 id='maven'> 3.5 maven local repository </h3>
 
+edit the /apache-maven-3.3.3/conf/setting.xml
+
+```xml
+<!-- localRepository
+   | The path to the local repository maven will use to store artifacts.
+   |
+   | Default: ${user.home}/.m2/repository
+  -->
+  <localRepository>/media/uraplutonium/Workstation/Applications/maven-repo</localRepository>
+```
+  
 ----------------------------------------------------------------
 
 <h3 id='gnome-notify'> 3.6 向Gnome桌面发送通知 </h3>
