@@ -818,9 +818,25 @@ crontab -l
 
 <h3 id='rsync'> 3.3 rsync文件同步 </h3>
 
+```bash
+#!/bin/bash
+rsync -r -u -p -o -g -t --delete --progress --exclude=lost+found --exclude=.Trash-1000 /media/uraplutonium/Workstation/ /media/uraplutonium/Resource/
+```
+
 ----------------------------------------------------------------
 
 <h3 id='proxy'> 3.4 通过代理服务器使用yum和dnf </h3>
+
+Add the following lines to the files:
+/etc/yum.conf
+or
+/etc/dnf/dnf.conf
+
+```
+proxy_username=your_user_name
+proxy_password=your_password
+proxy=http://ip_address:port
+```
 
 ----------------------------------------------------------------
 
