@@ -7,11 +7,9 @@ image: /ico/icon-linux.png
 tags: [linux]
 ---
 
-[TODO]: <> (中英双语)
-[TODO]: <> (引用)
-
-> This page is stil under construction...  
-> 该页面仍在建设中...
+[TODO]: <> (改善文字质量)
+[TODO]: <> (实现中英双语)
+[TODO]: <> (增加引用)
 
 这份Linux生存手册记录了一些Linux系统的桌面用户在安装使用过程中可能遇到的问题及其解决方法。该手册将始终是“incomplete”的状态，因为它将会随着时间推移不断扩充和完善。由于内容繁多，推荐使用目录中的链接直接查看需要的内容。
 
@@ -975,7 +973,7 @@ The default page http://127.0.0.1/ is directed to /media/uraplutonium/Workstatio
 ffmpeg -i $1 \
 	-c:v libx264 -preset veryslow -crf 22 \
 	-c:a libmp3lame -qscale:a 2 -ac 2 -ar 44100 \
-	video.mp4
+	video.mp4z
 ```
 
 ----------------------------------------------------------------
