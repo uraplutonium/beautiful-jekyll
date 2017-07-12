@@ -857,24 +857,125 @@ edit the /apache-maven-3.3.3/conf/setting.xml
 
 <h3 id='gnome-notify'> 3.6 向Gnome桌面发送通知 </h3>
 
+```
+notify-send -t 3000 "the message"
+```
+
 ----------------------------------------------------------------
 
 <h3 id='ssh-pwd'> 3.7 ssh免密码登录 </h3>
+
+workstation为本地主机，outpost为远程主机
+在workstation上生成无密码的私钥和公钥：
+```
+ssh-keygen -t rsa
+ssh -p 28366 uraplutonium@outpost "mkdir .ssh; chmod 0700 .ssh"
+scp -P 28366 /home/uraplutonium/.ssh/id_rsa.pub uraplutonium@outpost:.ssh/id_rsa.pub
+```
+
+在outpost上执行命令：
+```
+touch /home/uraplutonium/.ssh/authorized_keys
+chmod 600 /home/uraplutonium/.ssh/authorized_keys
+cat /home/uraplutonium/.ssh/id_rsa.pub >> /home/uraplutonium/.ssh/authorized_keys
+```
+
+在workstation上即可以使用ssh免密码登录outpost：
+```
+ssh -p 28366 uraplutonium@outpost
+```
 
 ----------------------------------------------------------------
 
 <h3 id='ssh-tunnel'> 3.8 ssh反向隧道 </h3>
 
+将本机的ssh22号端口映射到outpost VPS的23333端口：
+```
+ssh -NfR 23333:127.0.0.1:22 uraplutonium@outpost -p 28366
+```
+
+登录到outpost VPS:
+```
+ssh uraplutonium@outpost -p 28366
+```
+
+在outpost VPS上登录到workstation:
+```
+ssh uraplutonium@localhost -p 23333
+```
+
+在outpost VPS上可以使用以下命令查看连接:
+```
+netstat -tnl | grep 127.0.0.1
+```
+
 ----------------------------------------------------------------
 
 <h3 id='samba'> 3.9 samba共享文件夹设置 </h3>
+
+Add the following lines to /etc/samba/smb.conf:
+```
+[Public]
+   comment = Public
+   path = /home/uraplutonium/YandexDisk/Public
+   browseable = yes
+   read only = no
+   guest ok = yes
+   writable = yes
+   available = yes
+   public = yes
+   create mask = 0755
+   directory mask = 0755
+```
+   
+Run:
+```
+sudo /etc/init.d/samba reload
+```
 
 ----------------------------------------------------------------
 
 <h3 id='php5'> 3.10 apache2和php5网站 </h3>
 
+#### 1. install apache2 php5 libapache2-mod-php5
+
+#### 2. make the home folder of the site:
+
+```
+mkdir /media/uraplutonium/Workstation/Workspace/sites/
+```
+
+#### 3. append the following lines to /etc/apache2/sites-available/000-default.conf
+
+```
+Alias / "/media/uraplutonium/Workstation/Workspace/sites/"
+<Directory "/media/uraplutonium/Workstation/Workspace/sites/">
+    Order allow,deny
+    Allow from all
+    # New directive needed in Apache 2.4.3: 
+    Require all granted
+	</Directory>
+```
+	
+#### 4. restart apache2
+
+```
+sudo /etc/init.d/apache2 restart
+```
+
+#### 5. sites in /media/uraplutonium/Workstation/Workspace/sites/subfolder/site.php will be available at http://127.0.0.1/subfolder/site/php
+
+The default page http://127.0.0.1/ is directed to /media/uraplutonium/Workstation/Workspace/sites/index.html
+
 ----------------------------------------------------------------
 
 <h3 id='ffmpeg'> 3.11 将视频转换为mp4格式 </h3>
+
+```
+ffmpeg -i $1 \
+	-c:v libx264 -preset veryslow -crf 22 \
+	-c:a libmp3lame -qscale:a 2 -ac 2 -ar 44100 \
+	video.mp4
+```
 
 ----------------------------------------------------------------
