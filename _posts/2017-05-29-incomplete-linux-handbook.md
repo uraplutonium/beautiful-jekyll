@@ -615,10 +615,33 @@ ibus-daemon -d -x
 
 <h3 id='desktop'> 2.12 手动创建Gnome桌面快捷方式 </h3>
 
+To manually create a desktop shortcut for a particular program or command, you can create a .desktop file using any text editor, and place it in either 
+/usr/share/applications
+or
+~/.local/share/applications
+
+```
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0                                     # version of an app.
+Name[en_US]=yEd                                 # name of an app.
+GenericName=GUI Port Scanner                    # longer name of an app.
+Exec=java -jar /opt/yed-3.11.1/yed.jar          # command used to launch an app.
+Terminal=false                                  # whether an app requires to be run in a terminal.
+Icon[en_US]=/opt/yed-3.11.1/icons/yicon32.png   # location of icon file.
+Type=Application                                # type.
+Categories=Application;Network;Security;        # categories in which this app should be listed.
+Comment[en_US]=yEd Graph Editor                 # comment which appears as a tooltip.
+```
+
 ----------------------------------------------------------------
 
 <h3 id='gvfs'> 2.13 修复gvfs-metadata大量消耗内存 </h3>
 
+```
+pkill gvfsd-metadata
+rm -rf ~/.local/share/gvfs-metadata
+```
 ----------------------------------------------------------------
 
 <h2 id='3'> 3. Linux commands & tools 命令与工具 </h2>
