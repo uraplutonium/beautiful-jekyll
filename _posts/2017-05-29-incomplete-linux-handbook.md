@@ -600,6 +600,17 @@ XDG_PICTURES_DIR="$HOME/Pictures"
 
 <h3 id='ibus'> 2.11 gnome ibus设置 </h3>
 
+开机自动启动ibus daemon:
+
+Add the following codes in ~/.profile:
+
+```
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -d -x
+```
+
 ----------------------------------------------------------------
 
 <h3 id='desktop'> 2.12 手动创建Gnome桌面快捷方式 </h3>
