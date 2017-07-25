@@ -1,13 +1,12 @@
 ---
 layout: page
-title: Sparse ADtree
+title: Sparse AD-Tree package in Python
 subtitle: subtitle
+bigimg: /img/adtree.png
 ---
 
 > This page is stil under construction...  
-> 该页面仍在建设中...1
-
-# Sparse AD-Tree package in Python
+> 该页面仍在建设中...
 
 ## 1. Introduction for Record, AD-Tree and Contingency Table modules
 When using this package, each of “Record”, “ADTree” and “ContingencyTable” modules must be imported to program. However, there are more than one
