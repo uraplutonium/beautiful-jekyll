@@ -23,7 +23,7 @@ description: ""
 navbar-links:
   Posts: "https://uraplutonium.github.io"
   Projects:
-     - TeabagML Toolkit: "https://uraplutonium.github.io/"
+     - TeabagML Toolkit: "teabag-ml"
      - ADTree: "https://uraplutonium.github.io/adtree-py/"
      - Publication management: "https://uraplutonium.github.io/"
      - Hadoop crawler: "https://uraplutonium.github.io/"
