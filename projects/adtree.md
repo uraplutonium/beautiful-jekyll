@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Sparse AD-Tree package in Python
+title: Sparse AD-Tree in Python
 subtitle: subtitle
-bigimg: /img/adtree.png
+bigimg: /img/adtree.jpg
 ---
 
 > This page is stil under construction...  
