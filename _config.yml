@@ -24,11 +24,11 @@ navbar-links:
   Posts: "https://uraplutonium.github.io"
   Projects:
      - TeabagML Toolkit: "projects/teabag-ml"
-     - ADTree: "https://uraplutonium.github.io/adtree-py/"
-     - Publication management: "https://uraplutonium.github.io/"
-     - Hadoop crawler: "https://uraplutonium.github.io/"
-     - Ebbinghaus: "https://uraplutonium.github.io/"
-     - Tiny compiler: "https://uraplutonium.github.io/"
+     - ADTree: "projects/adtree"
+     - Publication management: "projects/publication"
+     - Hadoop crawler: "projects/hcrawler"
+     - Ebbinghaus: "projects/ebbinghaus"
+     - Tiny compiler: "projects/tiny-compiler"
   Publications: "publications"
   About Me: "aboutme"
 
