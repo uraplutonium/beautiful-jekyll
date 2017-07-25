@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sparse AD-Tree in Python
-subtitle: subtitle
+subtitle: A Sparse All-Dimensions Tree toolkit for stastistics machine learning accelaration
 bigimg: /img/adtree.jpg
 ---
 
