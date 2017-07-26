@@ -2,7 +2,7 @@
 layout: page
 title: teabag-ml-test
 subtitle: subtitle
-bigimg: /img/1.jpg
+bigimg: /img/2.jpg
 ---
 
 # This page is under construction...
