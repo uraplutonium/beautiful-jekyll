@@ -1,7 +1,8 @@
 ---
 layout: page
 title: teabag-ml-test
-subtitle: publications
+subtitle: subtitle
+bigimg: /img/1.jpg
 ---
 
 # This page is under construction...
