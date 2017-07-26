@@ -8,6 +8,11 @@ bigimg: /img/adtree.jpeg
 > This page is stil under construction...  
 > 该页面仍在建设中...
 
+[Introduction]: <> (What is adtree-py. Why build adtree-py. What it does. What it does not do.)
+
+
+[Manual]: <> (How to install it. How to use it. Examples/Demos.)
+
 ## 1. Introduction for Record, AD-Tree and Contingency Table modules
 When using this package, each of “Record”, “ADTree” and “ContingencyTable” modules must be imported to program. However, there are more than one
 implementations for each of these three modules. As a result, please consider which implementations is more appropriate before importing.
@@ -232,3 +237,5 @@ Q: [2, 1] C: 1
 Q: [3, 1] C: 1
 Q: [4, 1] C: 0
 ```
+
+[Wiki]: <> (How adtree-py works. What does it contain.)
