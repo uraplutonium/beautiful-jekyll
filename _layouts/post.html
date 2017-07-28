@@ -65,9 +65,6 @@ layout: base
       
       {% for c in sorted_comments %}
       <div class="media">
-	<div class="media-left">
-	  <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="40" width="40">
-	</div>
 	<div class="media-body">
 	  <p class="text-muted">
             <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
