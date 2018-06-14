@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://uraplutonium.github.io"
+url: "https://uraplutonium.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -21,16 +21,16 @@ description: ""
 
 # List of links in the navigation bar
 navbar-links:
-  Posts: "https://uraplutonium.github.io"
+  Posts: "https://uraplutonium.github.io/"
   Projects:
-     - TeabagML Toolkit: "projects/teabag-ml"
-     - ADTree: "projects/adtree"
-     - Publication management: "projects/publication"
-     - Hadoop crawler: "projects/hcrawler"
-     - Ebbinghaus: "projects/ebbinghaus"
-     - Tiny compiler: "projects/tiny-compiler"
-  Publications: "publications"
-  About Me: "aboutme"
+     - TeabagML Toolkit: "projects/teabag-ml/"
+     - ADTree: "projects/adtree/"
+     - Publication management: "projects/publication/"
+     - Hadoop crawler: "projects/hcrawler/"
+     - Ebbinghaus: "projects/ebbinghaus/"
+     - Tiny compiler: "projects/tiny-compiler/"
+  Publications: "publications/"
+  About Me: "aboutme/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
