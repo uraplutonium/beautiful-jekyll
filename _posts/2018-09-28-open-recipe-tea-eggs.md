@@ -10,7 +10,7 @@ comments: true
 > Open Recipe is a recipe that anyone can share and modify the methods of making delicious foods.  
 > 开源食谱是一种任何人都能够分享和改进制作美食方法的食谱。
 
-![tea eggs](https://github.com/uraplutonium/uraplutonium.github.io/tree/master/img/open-recipe-tea-eggs.png)
+![tea eggs](https://raw.githubusercontent.com/uraplutonium/uraplutonium.github.io/master/img/open-recipe-tea-eggs.png)
 
 ## 1. Time 时间
 
