@@ -8,70 +8,47 @@ tags: [open-recipe]
 comments: true
 ---
 
-> This page is stil under construction...  
-> 该页面仍在建设中...1
+> Open Recipe is a recipe that anyone can easily access and modify. The purpose of Open Recipe is to freely share and improve the methods of making delicious foods.
+> 开源食谱是一种任何人都能够轻易获取、并对其做出修改的食谱。开源食谱的目的在于自由地分享和改进制作美食的方法。
 
-## TeX Live 2014 profile config 3
+## 1. Time 时间
 
-Add the following contents to *~/.profile*:
-```
-TEXLIVE_BASE='/usr/local/texlive/2014'
-TEXLIVE_BIN="$TEXLIVE_BASE/bin/i386-linux"
-TEXLIVE_DOC="$TEXLIVE_BASE/texmfdist/doc"
-export PATH="$TEXLIVE_BIN:$PATH"
-export MANPATH="$TEXLIVE_DOC/man:$MANPATH"
-export INFOPATH="$TEXLIVE_DOC/info:$INFOPATH"
-export OSFONTDIR='/usr/share/fonts'
-export XINDY_LIBDIR="$TEXLIVE_BIN"
-```
+**Cooking 烹饪** 1 h.
+**Baking 烘培** 0 min.
+**Resting 静置** 1 h.
 
-## Latex Beamer中文书签
+## 2. Ingredients 原料 `(6例)`
 
-beamer不能使用dvipdfmx来生成pdf所以对中文标签的支持不能通过dvipdfmx来完成。CJKutf8可以很好的完成中文标签tounicode的转换，但是beamer.cls中的定义存在问题。
-打开*/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/beamer.cls*，找到
+	| 6个 | 鸡蛋 |
+	| 2.6升 | 水 |
+	| 100毫升 | 生抽 |
+	| 20克 | 红茶 |
+	| 20克 | 糖 |
+	| 10克 | 生姜 |
+	| 1根 | 肉桂 |
+	| 2个 | 八角 |
+	| 1片 | 月桂叶 |
 
-```
-\DeclareOptionBeamer{CJK}{\ExecuteOptionsBeamer{cjk}}
-\DeclareOptionBeamer{cjk}{
-\def\beamer@hypercjk{\hypersetup{CJKbookmarks=true}}
-\def\beamer@activecjk{
-% Activate all >128 characters.
-\count@=127
-\@whilenum\count@<255 \do{'%'
-\advance\count@ by 1
-\lccode`\~=\count@
-\catcode\count@=\active
-\lowercase{\def~{\kern1ex}}
-}
-}
-}
-```
+## 3. Utensils 器具
 
-在beamer3.06中是在178行，把
-```latex
-'%' Activate all >128 characters.
-```
-改成
-```latex
-'%' Activate all >＝0x80 characters.
-```
+漏勺，煮锅，大碗，汤匙，刀，砧板
 
-然后在上文的最后一个}后加上下面几句：
-```latex
-\DeclareOptionBeamer{CJKutf8}{\ExecuteOptionsBeamer{cjkutf8}}
-\DeclareOptionBeamer{cjkutf8}{'%'
-\PassOptionsToPackage{unicode}{hyperref}
-\def\beamer@activecjk{
-'%' Activate all characters >= 0x80.
-\count@=127
-\@whilenum\count@<254 \do{'%'
-\advance\count@ by 1
-\lccode`\~=\count@
-\catcode\count@=\active
-\lowercase{\def~{\kern1ex}}
-}
-}
-}
-```
+## 4. Steps 步骤
 
-之后用\documentclass[CJKutf8]{beamer}调用beamer类，并用\usepackage{CJKutf8}来使用CJKutf8宏包，之后按常规使用中文环境，最后用pdflatex编译.tex文档两次即可。
++ Step 1
+> 原料： 1升水，6个鸡蛋
+> 器具： 煮锅，漏勺
+将水煮沸，用漏勺小心放入鸡蛋，避免破碎。在沸水中煮**10分钟**。
+
++ Step 2
+> 原料： 1升水
+> 器具： 大碗，汤匙
+将鸡蛋放入盛有冷水的大碗中。稍微冷却后，用汤匙背面将蛋壳均匀敲碎。
+
++ Step 3
+> 原料： 600毫升水，100毫升生抽，20克红茶，20克糖，10克生姜，1根肉桂，2个八角，1片月桂叶
+> 器具： 刀，砧板，煮锅
+将生姜切片。清空煮锅后，向煮锅中加入水、生抽、红茶、糖、生姜、肉桂、八角和月桂叶，中高火煮至沸腾，然后转至小火，加盖煮**10分钟**，制成腌汁。
+
++ Step 4
+向煮锅中加入鸡蛋，加盖小火煮**30分钟**。停止加热后，浸泡至少**1小时**，或腌制过夜。食用时剥去蛋壳，根据需要切半，尽情享用！
