@@ -2,14 +2,15 @@
 layout: post
 title: Tea Eggs 茶叶蛋
 subtitle: Open Recipe 开源食谱
-image: /ico/open-recipe.tea-eggs.jpg
-#bigimg: /img/background.png
-tags: [open-recipe]
+image: /img/open-recipe-tea-eggs.png
+#tags: [open source]
 comments: true
 ---
 
 > Open Recipe is a recipe that anyone can share and modify the methods of making delicious foods.  
 > 开源食谱是一种任何人都能够分享和改进制作美食方法的食谱。
+
+![tea eggs](https://github.com/uraplutonium/uraplutonium.github.io/tree/master/img/open-recipe-tea-eggs.png)
 
 ## 1. Time 时间
 
@@ -17,7 +18,7 @@ comments: true
 | Baking 烘培  | 0 min. |
 | Resting 静置 | 1 h. |
 
-## 2. Ingredients 原料 `(6例)`
+## 2. Ingredients 原料 (6例)
 
 | 6个 | 鸡蛋 |
 | 2.6升 | 水 |
