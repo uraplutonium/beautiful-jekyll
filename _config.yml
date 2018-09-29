@@ -24,7 +24,7 @@ navbar-links:
   Posts: "https://uraplutonium.github.io/"
   Projects:
      - TeabagML Toolkit: "projects/teabag-ml/"
-     - ADTree: "projects/adtree/"
+     - ADTree: "https://github.com/uraplutonium/adtree-py/README/"
      - Publication management: "projects/publication/"
      - Hadoop crawler: "projects/hcrawler/"
      - Ebbinghaus: "projects/ebbinghaus/"

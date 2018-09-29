@@ -5,11 +5,7 @@ subtitle: A sparse all-dimensions tree tool-kit in Python for statistical machin
 bigimg: /img/adtree.jpeg
 ---
 
-> This page is stil under construction...  
-> 该页面仍在建设中...
-
 [Introduction]: <> (What is adtree-py. Why build adtree-py. What it does. What it does not do.)
-
 
 [Manual]: <> (How to install it. How to use it. Examples/Demos.)
 
